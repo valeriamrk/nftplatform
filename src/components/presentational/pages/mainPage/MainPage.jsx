@@ -1,10 +1,11 @@
 import React from "react";
 import {
-  PageBasicLayout,
+  PageBasicLayout, 
   LogoGroup,
   SearchBar,
   HeaderItemGroup,
   Hero,
+  Collections
 } from "../../../presentational";
 
 const MainPage = () => {
@@ -17,7 +18,8 @@ const MainPage = () => {
           <HeaderItemGroup />
         </PageBasicLayout.PageHeader>
         <PageBasicLayout.PageContent>
-          <Hero />
+          {/* <Hero /> */}
+          <Collections/>
           {/* outlet from routing */}
         </PageBasicLayout.PageContent>
       </PageBasicLayout>

@@ -12,3 +12,4 @@ export * from './templates/layout/pageBasicLayout/PageBasicLayout'
 export * from "./templates/box/Box.styled"
 export * from "./templates/flex/Flex.styled"
 export * from './pages/mainPage/MainPage'
+export * from './pages/collectionsPage/Collections'
