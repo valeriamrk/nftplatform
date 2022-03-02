@@ -6,7 +6,6 @@ export const Layout = styled.div`
 `;
 
 export const Header = styled.div`
-  width: 100vw;
   padding: 1.2rem 0.8rem 1.2rem 0.8rem;
   display: flex;
   justify-content: space-between;
@@ -18,7 +17,6 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #feffff;
 `;
 
 // searchIcon: `text-[#8a939b] mx-3 font-bold text-lg`,

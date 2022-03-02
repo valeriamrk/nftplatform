@@ -41,13 +41,68 @@ export const Title = styled.div`
 
 export const Description = styled.div`
   color: #8a939b;
-  font-size: 46px;
-  font-weight: 600;
   max-width: 400px;
   font-size: 1.5rem; /* 24px */
   line-height: 2rem; /* 32px */
   margin-top: 0.8rem;
   margin-bottom: 2.5rem;
+`;
+
+export const BtnContainer = styled.div`
+  display: flex;
+`;
+
+export const CardContainer = styled.div`
+display: flex;
+flex-direction: column;
+  border-radius: 3rem;
+`;
+
+export const InfoContainer = styled.div`
+  height: 5rem; /* 80px */
+  background-color: #313338;
+  padding: 1rem; /* 16px */
+  border-bottom-right-radius: 0.5rem; /* 8px */
+  border-bottom-left-radius: 0.5rem; /* 8px */
+  display: flex;
+  align-items: center;
+  color: white;
+`;
+
+export const MainImage = styled.img`
+  border-top-right-radius: 0.5rem; /* 8px */
+  border-top-left-radius: 0.5rem; /* 8px */
+`;
+
+export const Avatar = styled.img`
+  height: 2.25rem;
+  border-radius: 9999px;
+`;
+//h-[2.25rem] rounded-full"
+
+export const Author = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem; /* 16px */
+`;
+
+export const Name = styled.div``;
+
+export const Link = styled.a`
+color: #1868b7
+`;
+
+
+export const InfoIcon = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1 1 0%;
+  color: #8a939b;
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
+  font-weight: 700;
 `;
 
 // wrapper: `relative`,

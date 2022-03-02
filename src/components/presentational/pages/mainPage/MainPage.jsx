@@ -18,6 +18,7 @@ const MainPage = () => {
         </PageBasicLayout.PageHeader>
         <PageBasicLayout.PageContent>
           <Hero />
+          {/* outlet from routing */}
         </PageBasicLayout.PageContent>
       </PageBasicLayout>
     </div>

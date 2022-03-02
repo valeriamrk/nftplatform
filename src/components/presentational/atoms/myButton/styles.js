@@ -1,33 +1,34 @@
-import styled from "styled-components/macro";
+import styled, { css } from "styled-components/macro";
 
 export const MyButton = styled.button`
-  font-family: 'Montserrat', sans-serif;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background: none;
-  color: black;
-  height: 100%;
-  padding: ${(props) => (props.justIcon ? "8px" : "4")};
-  /* padding: ${props => props.padding || "4px"} */
-  margin: 0;
-  /* padding: 16px 8px 16px 8px; */
-  border: ${(props) => (props.premium ? "0.5px solid black" : "none")};
-  font-size: 14px;
-  cursor: pointer;
+  border-style: none;
+  position: relative;
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+  font-weight: 600;
+  padding-left: 3rem; /* 48px */
+  padding-right: 3rem; /* 48px */
+  padding-top: 1rem; /* 16px */
+  padding-bottom: 1rem; /* 16px */
+  background-color: #2181e2;
+  border-radius: 0.5rem; /* 8px */
+  margin-right: 1.25rem; /* 20px */
+  color: white;
   &:hover {
-    background-color: ${(props) => (props.headerStyle ? "#45A29E" : "#d1e8e2")};
+    background-color: #42a0ff;
+    cursor: pointer;
   }
+  ${(props) =>
+    props.primary &&
+    css`
+      background-color: #363840;
+      color: #e4e8ea;
+      &:hover {
+        background-color: #4c505c;
+        cursor: pointer;
+      }
+    `};
 `;
 
-export const Icons = styled.div`
-  padding-right: 4px;
-  padding-left: 4px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-`;
-
-export const Value = styled.div`
-  padding: 4px;
-`;
+//   accentedButton: ` relative text-lg font-semibold px-12 py-4 bg-[#2181e2] rounded-lg mr-5 text-white hover:bg-[#42a0ff] cursor-pointer`,
+//   button: ` relative text-lg font-semibold px-12 py-4 bg-[#363840] rounded-lg mr-5 text-[#e4e8ea] hover:bg-[#4c505c] cursor-pointer`,
