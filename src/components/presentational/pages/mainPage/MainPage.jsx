@@ -7,20 +7,26 @@ import {
   Hero,
   Collections
 } from "../../../presentational";
+import { Outlet } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 
 const MainPage = () => {
+
+  const navbarLinks = useSelector(
+    (state) => state.navbarLinksData.navbarLinks
+  );
+
   return (
     <div>
       <PageBasicLayout>
         <PageBasicLayout.PageHeader>
           <LogoGroup />
           <SearchBar />
-          <HeaderItemGroup />
+          <HeaderItemGroup navbarLinks={navbarLinks}/>
         </PageBasicLayout.PageHeader>
         <PageBasicLayout.PageContent>
-          {/* <Hero /> */}
-          <Collections/>
-          {/* outlet from routing */}
+          <Outlet/>
         </PageBasicLayout.PageContent>
       </PageBasicLayout>
     </div>

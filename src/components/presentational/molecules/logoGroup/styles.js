@@ -4,6 +4,7 @@ export const LogoGroup = styled.div`
 display: flex;
 align-items: center;
 flex-direction: row;
+cursor: pointer;
 `
 
 

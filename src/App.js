@@ -1,11 +1,21 @@
 import "./App.css";
-import { Logo, PageBasicLayout } from "./components/presentational";
-import {MainPage} from "./components/presentational";
+import {
+  Collections,
+  Logo,
+  PageBasicLayout,
+} from "./components/presentational";
+import { MainPage, Hero } from "./components/presentational";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <MainPage />
+      <Routes>
+        <Route path="/" element={<MainPage />}>
+          <Route index element={<Hero />} />
+          <Route path="/collections" element={<Collections />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
