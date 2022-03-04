@@ -2,6 +2,7 @@ import styled from "styled-components/macro";
 
 export const HeroWrapper = styled.div`
   position: relative;
+  overflow: hidden;
 `;
 
 export const Container = styled.div`
@@ -53,8 +54,8 @@ export const BtnContainer = styled.div`
 `;
 
 export const CardContainer = styled.div`
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
   border-radius: 3rem;
 `;
 
@@ -90,9 +91,8 @@ export const Author = styled.div`
 export const Name = styled.div``;
 
 export const Link = styled.a`
-color: #1868b7
+  color: #1868b7;
 `;
-
 
 export const InfoIcon = styled.div`
   display: flex;

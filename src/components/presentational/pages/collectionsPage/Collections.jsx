@@ -13,7 +13,7 @@ const Collections = (props) => {
 
 
   return (
-    <div>
+    <S.CollectionsWrapper>
       <S.BannerImageContainer>
         <S.BannerImage
           src="https://www.cryptocoven.xyz/opengraph.png"
@@ -118,7 +118,7 @@ const Collections = (props) => {
 
 
       </S.NftCardCollection>
-    </div>
+    </S.CollectionsWrapper>
   );
 };
 

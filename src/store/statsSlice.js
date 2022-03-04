@@ -8,6 +8,7 @@ const initialState = {
       avatar: "https://lh3.googleusercontent.com/lW22aEwUE0IqGaYm5HRiMS8DwkDwsdjPpprEqYnBqo2s7gSR-JqcYOjU9LM6p32ujG_YAEd72aDyox-pdCVK10G-u1qZ3zAsn2r9=s100" ,
       volume: "15 903,15",
       hours: "+35.96%",
+      // hoursIsPlus: hours > 0 ? true : false,
       days: "+49.05%",
       floorPrice: "5.64",
       owners: "4.2K",

@@ -4,11 +4,10 @@ import {
   LogoGroup,
   SearchBar,
   HeaderItemGroup,
-  Hero,
-  Collections
 } from "../../../presentational";
 import { Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
+import * as S from "./styles";
 
 
 const MainPage = () => {
@@ -18,7 +17,7 @@ const MainPage = () => {
   );
 
   return (
-    <div>
+    <S.MainContainer>
       <PageBasicLayout>
         <PageBasicLayout.PageHeader>
           <LogoGroup />
@@ -29,7 +28,7 @@ const MainPage = () => {
           <Outlet/>
         </PageBasicLayout.PageContent>
       </PageBasicLayout>
-    </div>
+    </S.MainContainer>
   );
 };
 

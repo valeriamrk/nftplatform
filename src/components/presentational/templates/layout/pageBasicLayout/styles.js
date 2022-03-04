@@ -11,6 +11,8 @@ export const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: #04111d;
+  position: sticky;
+  top: 0;
 `;
 
 export const Content = styled.div`

@@ -1,5 +1,8 @@
 import styled from "styled-components/macro";
 
+export const CollectionsWrapper = styled.div`
+`
+
 export const BannerImageContainer = styled.div`
 height: 20vh;
 width: 100%;

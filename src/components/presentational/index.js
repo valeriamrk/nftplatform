@@ -7,6 +7,10 @@ export * from './molecules/logoGroup/LogoGroup'
 export * from './molecules/headerItemGroup/HeaderItemGroup'
 export * from './organisms/hero/Hero'
 export * from './organisms/nftCard/NftCard'
+export * from './organisms/topList/TopList'
+export * from './organisms/topList/TopListItem'
+export * from './organisms/topList/TopListHeader'
+
 export * from './templates/box/Box.styled'
 export * from './templates/flex/Flex.styled'
 export * from './templates/layout/pageBasicLayout/PageBasicLayout'
@@ -14,3 +18,4 @@ export * from "./templates/box/Box.styled"
 export * from "./templates/flex/Flex.styled"
 export * from './pages/mainPage/MainPage'
 export * from './pages/collectionsPage/Collections'
+export * from './pages/topNftPage/TopNftPage'
