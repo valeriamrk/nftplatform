@@ -14,7 +14,6 @@ const TopNftPage = () => {
         <S.TextContainer>Top NFTs</S.TextContainer>
         <S.DescriptionContainer>The top NFTs on OpenOcaen, ranked by volume, floor price and other statistics.</S.DescriptionContainer>
         <TopList statsData={statsData}/>
-
       </S.TopContainer>
     </div>
   );

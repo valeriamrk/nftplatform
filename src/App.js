@@ -4,6 +4,7 @@ import {
   TopNftPage,
   Logo,
   PageBasicLayout,
+  CreatePage,
 } from "./components/presentational";
 import { MainPage, Hero } from "./components/presentational";
 import { Routes, Route } from "react-router-dom";
@@ -16,6 +17,7 @@ function App() {
           <Route index element={<Hero />} />
           <Route path="/collections" element={<Collections />} />
           <Route path="/stats" element={<TopNftPage />} />
+          <Route path="/create" element={<CreatePage/>} />
         </Route>
       </Routes>
     </div>

@@ -10,7 +10,14 @@ const TopListItem = (props) => {
       <S.FirstCell>
         {id} <S.Avatar src={avatar} alt="avatar" /> {author}
       </S.FirstCell>
-      <S.ListItem>{volume}</S.ListItem>
+      <S.ListItem>
+        {" "}
+        <S.EthLogo
+          src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"
+          alt="eth"
+        />
+        {volume}
+      </S.ListItem>
       <S.ListItem>{hours}</S.ListItem>
       <S.ListItem>{days}</S.ListItem>
       <S.ListItem>
