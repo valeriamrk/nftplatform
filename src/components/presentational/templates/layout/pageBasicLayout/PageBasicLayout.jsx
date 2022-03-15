@@ -8,6 +8,9 @@ const PageHeader = ({ children }) => {
 const PageContent = ({ children }) => {
   return <S.Content>{children}</S.Content>;
 };
+const PageFooter = ({ children }) => {
+  return <S.Footer>{children}</S.Footer>;
+};
 
 const PageLayout = ({ children }) => {
   return <S.Layout>{children}</S.Layout>;
@@ -16,5 +19,6 @@ const PageLayout = ({ children }) => {
 const PageBasicLayout = PageLayout;
 PageBasicLayout.PageHeader = PageHeader;
 PageBasicLayout.PageContent = PageContent;
+PageBasicLayout.PageFooter = PageFooter;
 
 export { PageBasicLayout };

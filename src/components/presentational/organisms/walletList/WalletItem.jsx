@@ -6,10 +6,9 @@ const WalletItem = (props) => {
 
   return (
     <S.ListItemWrapper>
+      <S.Logo src={logo} alt="logo" />
       <div>{name}</div>
-      {/* <S.Logo>
-        <img src={logo} alt="logo" />
-      </S.Logo> */}
+
       {/* <S.ListItem>1</S.ListItem>
       <S.ListItem>2</S.ListItem> */}
     </S.ListItemWrapper>

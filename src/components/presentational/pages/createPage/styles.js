@@ -47,22 +47,13 @@ export const TooltipText = styled.span`
   margin-left: -300px;
   opacity: 0;
   transition: opacity 0.3s;
-  /* &:after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    right: 80%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  } */
 `;
 
 export const Tooltip = styled.div`
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted white;
+  font-weight: 700;
+  color: rgb(21, 178, 229);
   &:hover {
     ${TooltipText}{
       visibility: visible;

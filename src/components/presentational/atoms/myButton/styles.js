@@ -28,7 +28,36 @@ export const MyButton = styled.button`
         cursor: pointer;
       }
     `};
+  ${(props) =>
+    props.small &&
+    css`
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      font-size: 16px;
+      &:hover {
+        background-color: #42a0ff;
+        cursor: pointer;
+      }
+    `};
+  ${(props) =>
+    props.icon &&
+    css`
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+      padding: 16px 16px ;
+      font-size: 16px;
+      background-color: #363840;
+      color: #e4e8ea;
+      margin-right: 12px;
+      margin-bottom: 12px;
+      &:hover {
+        background-color: #4c505c;
+        cursor: pointer;
+      }
+      }
+    `};
 `;
-
-//   accentedButton: ` relative text-lg font-semibold px-12 py-4 bg-[#2181e2] rounded-lg mr-5 text-white hover:bg-[#42a0ff] cursor-pointer`,
-//   button: ` relative text-lg font-semibold px-12 py-4 bg-[#363840] rounded-lg mr-5 text-[#e4e8ea] hover:bg-[#4c505c] cursor-pointer`,

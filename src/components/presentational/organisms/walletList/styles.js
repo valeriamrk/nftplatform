@@ -1,17 +1,48 @@
-import styled from "styled-components/macro";
+import styled, { css } from "styled-components/macro";
 
 //1. Wallet List
 export const ListWrapper = styled.div`
-  /* box-sizing: border-box;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin-top: 40px; */
+  width: 40%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  ${(props) =>
+    props.sidebar &&
+    css`
+      width: 300px;
+    `};
 `;
 
 // 2. Wallet Item
 
 export const ListItemWrapper = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  width: 100%;
+  font-weight: 600;
+  border-bottom: 1px solid #646072;
+  border-right: 1px solid #646072;
+  border-left: 1px solid #646072;
+  padding: 16px 8px 16px 8px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 1px 3px 8px 3px #646072;
+  }
+  &:first-child {
+    border-top: 1px solid #646072;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  &:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
 `;
 
 export const ListItem = styled.div`
@@ -23,9 +54,7 @@ export const ListItem = styled.div`
 `;
 
 export const Logo = styled.img`
-  margin-left: 8px;
-  margin-right: 8px;
-  border-radius: 50%;
-  width: 50px;
+  margin-left: 16px;
+  margin-right: 16px;
+  height: 24px;
 `;
-

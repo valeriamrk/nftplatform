@@ -1,12 +1,13 @@
-import React from "react";
-import { HeaderItem } from "../../../presentational";
+import React, { useState } from "react";
+import { HeaderItem, SideNavBar } from "../../../presentational";
 import * as S from "./styles";
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 
 const HeaderItemGroup = (props) => {
 
-const {navbarLinks} = props
+const {navbarLinks, handleSidebarStatus} = props
+
 
   return (
     <S.HeaderItemGroup>
@@ -16,15 +17,11 @@ const {navbarLinks} = props
             label={element.label}
             />
               )}
-      {/* // <HeaderItem>Collections</HeaderItem>
-      // <HeaderItem>Stats</HeaderItem>
-      // <HeaderItem>Resources</HeaderItem>
-      // <HeaderItem>Create</HeaderItem> */}
       <S.HeaderIcon>
         <CgProfile />
       </S.HeaderIcon>
       <S.HeaderIcon>
-        <MdOutlineAccountBalanceWallet />
+        <MdOutlineAccountBalanceWallet onClick={() => handleSidebarStatus()}/>
       </S.HeaderIcon>
     </S.HeaderItemGroup>
   );

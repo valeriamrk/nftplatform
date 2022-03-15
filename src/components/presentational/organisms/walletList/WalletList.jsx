@@ -3,10 +3,10 @@ import * as S from "./styles";
 import { WalletItem } from "../../../presentational";
 
 const WalletList = (props) => {
-  const { walletsData, test } = props;
+  const { walletsData, sidebar } = props;
 
   return (
-    <S.ListWrapper>
+    <S.ListWrapper sidebar>
       {/* {walletsData} */}
       {walletsData.map((element) =>
             <WalletItem

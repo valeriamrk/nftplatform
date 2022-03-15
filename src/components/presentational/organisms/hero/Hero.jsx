@@ -1,5 +1,5 @@
 import React from "react";
-import { MyButton } from "../../../presentational";
+import { MyButton, SideNavBar } from "../../../presentational";
 import * as S from "./styles";
 
 const Hero = () => {

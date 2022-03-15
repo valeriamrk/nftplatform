@@ -1,6 +1,6 @@
 import * as S from "./styles";
 import React from "react";
-import { WalletList } from "../../../presentational";
+import { SideNavBar, WalletList } from "../../../presentational";
 import { useSelector } from "react-redux";
 
 const CreatePage = () => {
@@ -23,7 +23,6 @@ const CreatePage = () => {
         providers or create a new one.
       </div>
       <WalletList walletsData={walletsData}/>
-      {/* <WalletList test="test"/> */}
     </S.TopContainer>
   );
 };
