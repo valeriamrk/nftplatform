@@ -3,13 +3,14 @@ import { InputField } from "../../../presentational";
 import * as S from "./styles";
 import { AiOutlineSearch } from "react-icons/ai";
 
-const SearchBar = () => {
+const SearchBar = (props) => {
+ const {placeholder, white} = props
   return (
-    <S.SearchBar>
+    <S.SearchBar {...props}>
       <S.SearchIcon>
         <AiOutlineSearch />
       </S.SearchIcon>
-      <InputField placeholder="Search items, collections, and accounts"/>
+      <InputField placeholder={placeholder} white={white}/>
     </S.SearchBar>
   );
 };

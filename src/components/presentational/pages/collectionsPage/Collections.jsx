@@ -1,16 +1,10 @@
 import React from "react";
 import * as S from "./styles";
-import { CgWebsite } from "react-icons/cg";
-import { AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
-import { HiDotsVertical } from "react-icons/hi";
-import { NftCard } from "../../../presentational";
+import { NftCard, SocialIconsCollection } from "../../../presentational";
 import { useSelector } from "react-redux";
 
-
 const Collections = (props) => {
-
   const nftCards = useSelector((state) => state.nftCardsData.nftCards);
-
 
   return (
     <S.CollectionsWrapper>
@@ -29,26 +23,7 @@ const Collections = (props) => {
         </S.MidRow>
         <S.EndRow>
           <S.SocialIconsContainer>
-            <S.SocialIconsWrapper>
-              <S.SocialIconsContent>
-                <S.SocialIcon>
-                  <CgWebsite />
-                  <S.Divider />
-                </S.SocialIcon>
-                <S.SocialIcon>
-                  <AiOutlineInstagram />
-                  <S.Divider />
-                </S.SocialIcon>
-                <S.SocialIcon>
-                  <AiOutlineTwitter />
-                  <S.Divider />
-                </S.SocialIcon>
-                <S.SocialIcon>
-                  <HiDotsVertical />
-                  <S.Divider />
-                </S.SocialIcon>
-              </S.SocialIconsContent>
-            </S.SocialIconsWrapper>
+            <SocialIconsCollection />
           </S.SocialIconsContainer>
         </S.EndRow>
         <S.MidRow>
@@ -102,21 +77,16 @@ const Collections = (props) => {
         </S.MidRow>
       </S.InfoContainer>
       <S.NftCardCollection>
-        {nftCards.map((element) =>
-            <NftCard
+        {nftCards.map((element) => (
+          <NftCard
             id={element.id}
             author={element.author}
             name={element.nft_name}
             img={element.img}
             price={element.price}
             likes={element.likes}
-            />
-
-        )}
-
-
-
-
+          />
+        ))}
       </S.NftCardCollection>
     </S.CollectionsWrapper>
   );

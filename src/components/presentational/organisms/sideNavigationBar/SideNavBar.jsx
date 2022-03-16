@@ -7,10 +7,11 @@ import { useSelector } from "react-redux";
 const SideNavBar = (props) => {
   const walletsData = useSelector((state) => state.walletData.wallets);
 
-  const { openNav, sidebarActive } = props;
+  const { openNav, sidebarActive, handleSidebarStatusClose } = props;
 
   return (
-    <S.SideNav openNav={openNav} sidebarActive={sidebarActive}>
+    <S.SideNav openNav={openNav} sidebarActive={sidebarActive} onClick={() => handleSidebarStatusClose()}>
+      <S.Content onClick={(e) => e.stopPropagation()}>
       <S.NavHeader>
         <S.Icon>
           <IoPersonCircle />
@@ -31,6 +32,7 @@ const SideNavBar = (props) => {
       <S.WalletContainer>
         <WalletList walletsData={walletsData} sidebar />
       </S.WalletContainer>
+      </S.Content>
     </S.SideNav>
   );
 };

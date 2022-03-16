@@ -7,18 +7,30 @@ export const SideNav = styled.div`
   z-index: 1;
   bottom: 0;
   right: 0;
-  background-color: #202225;
   overflow-x: hidden;
-  /* transition: 0.5s; */
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background-color: rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
-    /* visibility: visible; */
-    transform: translate3d(0px, 0px, 0px);
+  /* visibility: visible; */
+  transform: translate3d(0px, 0px, 0px);
   ${(props) =>
     props.sidebarActive &&
     css`
-      width: 420px;
+      width: 100%;
     `};
+  /* transition: all 0.5s; */
+`;
+
+export const Content = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: #202225;
+  width: 420px;
 `;
 
 export const NavHeader = styled.div`
@@ -42,13 +54,12 @@ padding-right: 1rem; */
   margin-right: 8px;
 `;
 
-
 export const TooltipText = styled.span`
   visibility: hidden;
   width: 300px;
   line-height: 1.5;
   font-weight: 600;
-  background-color: rgb(112, 122, 131);;
+  background-color: rgb(112, 122, 131);
   color: white;
   text-align: center;
   border-radius: 6px;
@@ -68,9 +79,9 @@ export const Tooltip = styled.div`
   font-weight: 700;
   color: rgb(21, 178, 229);
   &:hover {
-    ${TooltipText}{
+    ${TooltipText} {
       visibility: visible;
-    opacity: 1;
+      opacity: 1;
     }
   }
 `;
@@ -80,12 +91,13 @@ export const Description = styled.div`
   padding: 20px 20px 0px 20px;
   line-height: 1.5;
   color: rgb(138, 147, 155);
-`
+`;
 
 export const WalletContainer = styled.div`
-width: 100%;
-display: flex;
-justify-content: center;
-padding: 0;
-margin: 0;
-`
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+`;

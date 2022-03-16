@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import allDataSlice from "./allDataSlice";
+import helpCenterSlice from "./helpCenterSlice";
 import navbarLinksSlice from "./navbarLinksSlice";
 import nftCardsSlice  from "./nftCardsSlice";
 import statsSlice from "./statsSlice";
@@ -13,6 +14,7 @@ const store = configureStore({
     statsData: statsSlice,
     walletData: walletSlice,
     allData: allDataSlice,
+    helpCenterData:helpCenterSlice,
   },
 });
 

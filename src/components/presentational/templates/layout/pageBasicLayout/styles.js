@@ -14,6 +14,7 @@ height: 72px;
   background-color: #04111d;
   position: sticky;
   top: 0;
+  z-index: 9999;
 `;
 
 export const Content = styled.div`

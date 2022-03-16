@@ -2,8 +2,7 @@ import "./App.css";
 import {
   Collections,
   TopNftPage,
-  Logo,
-  PageBasicLayout,
+  ResourcesPage,
   CreatePage,
 } from "./components/presentational";
 import { MainPage, Hero } from "./components/presentational";
@@ -18,6 +17,7 @@ function App() {
           <Route path="/collections" element={<Collections />} />
           <Route path="/stats" element={<TopNftPage />} />
           <Route path="/create" element={<CreatePage/>} />
+          <Route path="/resources" element={<ResourcesPage/>} />
         </Route>
       </Routes>
     </div>

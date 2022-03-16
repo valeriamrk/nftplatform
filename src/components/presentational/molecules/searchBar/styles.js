@@ -1,4 +1,4 @@
-import styled from "styled-components/macro";
+import styled, { css } from "styled-components/macro";
 
 export const SearchBar = styled.div`
   display: flex;
@@ -12,6 +12,19 @@ export const SearchBar = styled.div`
   &:hover {
     background-color: #4c505c;
   }
+  ${(props) =>
+    props.white &&
+    css`
+      height: 60px;
+      width: 610px;
+      background-color: white;
+      color: black;
+      border-radius: 5px;
+      &:hover {
+        background-color: white;
+        cursor: pointer;
+      }
+    `};
 `;
 
 export const SearchIcon = styled.div`

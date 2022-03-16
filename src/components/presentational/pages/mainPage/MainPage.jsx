@@ -10,7 +10,7 @@ import {
 import { Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import * as S from "./styles";
-import { changeSidebarStatus } from "../../../../store/allDataSlice";
+import { changeSidebarStatus, changeSidebarStatusClose } from "../../../../store/allDataSlice";
 
 
 
@@ -37,13 +37,17 @@ const handleSidebarStatus = () => {
   dispatch(changeSidebarStatus());
 };
 
+const handleSidebarStatusClose = () => {
+  dispatch(changeSidebarStatusClose())
+}
+
 
   return (
     <S.MainContainer>
       <PageBasicLayout>
         <PageBasicLayout.PageHeader>
           <LogoGroup />
-          <SearchBar />
+          <SearchBar placeholder="Search items, collections, and accounts"/>
           <HeaderItemGroup navbarLinks={navbarLinks} handleSidebarStatus={handleSidebarStatus}/>
           {/* <HeaderItemGroup navbarLinks={navbarLinks} handleOpenNav={handleOpenNav} /> */}
         </PageBasicLayout.PageHeader>
@@ -55,7 +59,7 @@ const handleSidebarStatus = () => {
         </PageBasicLayout.PageFooter>
       </PageBasicLayout>
       {/* <SideNavBar openNav={openNav} /> */}
-      <SideNavBar sidebarActive={sidebarData}/>
+      <SideNavBar sidebarActive={sidebarData} handleSidebarStatusClose={handleSidebarStatusClose}/>
     </S.MainContainer>
   );
 };
