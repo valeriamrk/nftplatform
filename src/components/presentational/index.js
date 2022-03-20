@@ -25,6 +25,9 @@ export * from './organisms/footer/Footer'
 export * from './organisms/sideNavigationBar/SideNavBar'
 export * from './organisms/helpItems/HelpList'
 export * from './organisms/helpItems/HelpListItems'
+export * from './organisms/questionItems/QuestionItem'
+export * from './organisms/questionItems/QuestionList'
+
 
 
 export * from './templates/box/Box.styled'

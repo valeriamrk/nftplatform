@@ -1,12 +1,14 @@
 import React from "react";
 import * as S from "./styles";
 
-const HelpListItems = () => {
+const HelpListItems = (props) => {
+
+  const {title, description} = props
   return (
-    <div>
-      <div>Header</div>
-      <div>Description aldlssllsld</div>
-    </div>
+    <S.ItemWrapper>
+      <S.Title>{title}</S.Title>
+      <S.Description>{description}</S.Description>
+    </S.ItemWrapper>
   );
 };
 

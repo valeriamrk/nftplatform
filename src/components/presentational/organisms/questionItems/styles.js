@@ -1,14 +1,24 @@
 import styled from "styled-components/macro";
 
-// 1. Help List
+// 1. Question List
+
 export const Wrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   color: white;
   margin-top: 60px;
   flex-wrap: wrap;
   justify-content: flex-start;
+`
 
+export const ListWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  color: white;
+  margin-top: 24px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 `;
 
 // 2. Help List Items
@@ -33,14 +43,28 @@ export const ItemWrapper = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
   letter-spacing: 0.25px;
+  margin-left: 16px;
 `;
 
-export const Description = styled.div`
-  font-size: 16px;
-  font-weight: 300;
+export const Label = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  flex: 1 0 340px;
+  margin: 0px 15px 15px 15px;
+  max-width: 100%;
+  text-align: left;
+  padding: 16px 0px 16px 0px;
+  &:hover {
+    cursor: pointer;
+    font-weight: 500;
+  }
+  font-size: 18px;
+  font-weight: 400;
   letter-spacing: 0.25px;
-  margin-top: 10px;
+  line-height: 1.5;
 `;

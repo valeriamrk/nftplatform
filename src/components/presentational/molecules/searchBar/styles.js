@@ -22,7 +22,6 @@ export const SearchBar = styled.div`
       border-radius: 5px;
       &:hover {
         background-color: white;
-        cursor: pointer;
       }
     `};
 `;

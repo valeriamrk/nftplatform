@@ -1,18 +1,34 @@
 import React from "react";
 import * as S from "./styles";
-import { SearchBar } from "../../../presentational";
+import { HelpList, QuestionList, SearchBar } from "../../../presentational";
+import { useSelector } from "react-redux";
 
 const ResourcesPage = () => {
+  const helpItemsData = useSelector(
+    (state) => state.helpCenterData.helpCenterItems
+  );
+  const helpQuestionsData = useSelector(
+    (state) => state.helpCenterData.questionItems
+  );
+
   return (
-    <div>
+    <S.MainContainer>
       <S.BannerContainer>
         {/* <S.Banner
           src="https://marmotamaps.com/de/fx/wallpaper/download/faszinationen/Marmotamaps_Wallpaper_Berchtesgaden_Desktop_1920x1080.jpg"
           alt="banner"
         /> */}
-        <S.SearchContainer><SearchBar white placeholder="Search"/></S.SearchContainer>
+        <S.SearchContainer>
+          <SearchBar white placeholder="Search" />
+        </S.SearchContainer>
       </S.BannerContainer>
-    </div>
+      <S.HelpListContainer>
+        <HelpList helpItemsData={helpItemsData} />
+      </S.HelpListContainer>
+      <S.QuestionsListContainer>
+        <QuestionList helpQuestionsData={helpQuestionsData} />
+      </S.QuestionsListContainer>
+    </S.MainContainer>
   );
 };
 
