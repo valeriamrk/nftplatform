@@ -2,6 +2,8 @@ import React from "react";
 import * as S from "./styles";
 import { NftCard, SocialIconsCollection } from "../../../presentational";
 import { useSelector } from "react-redux";
+import { MdVerified } from "react-icons/md";
+
 
 const Collections = (props) => {
   const nftCards = useSelector((state) => state.nftCardsData.nftCards);
@@ -38,6 +40,7 @@ const Collections = (props) => {
             >
               crypto_coven
             </S.AutorLink>
+            <MdVerified/>
           </S.CreatedBy>
         </S.MidRow>
         <S.MidRow>

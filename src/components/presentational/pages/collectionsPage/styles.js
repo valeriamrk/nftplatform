@@ -71,10 +71,6 @@ margin-top: 0.5rem; /* 8px */
 margin-bottom: 0.5rem; /* 8px */
 `
 
-export const Divider = styled.div`
-	border-right: 2px solid white;
-`
-
 export const Title = styled.div`
 	font-size: 3rem; /* 48px */
 line-height: 1;
@@ -86,9 +82,16 @@ export const CreatedBy = styled.div`
 	font-size: 1.125rem; /* 18px */
 line-height: 1.75rem; /* 28px */
 margin-bottom: 1rem; /* 16px */
+display: flex;
+justify-content: center;
+align-items: center;
+
 `
 export const AutorLink = styled.a`
 color: #2081e2;
+font-size: 18px;
+margin-left: 8px;
+margin-right: 8px;
 `
 
 export const StatsContainer = styled.div`

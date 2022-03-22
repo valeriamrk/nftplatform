@@ -2,9 +2,16 @@ import * as S from "./styles";
 import React from "react";
 import { SideNavBar, WalletList } from "../../../presentational";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
 const CreatePage = () => {
   const walletsData = useSelector((state) => state.walletData.wallets);
+  // const shortList = true
+  const [shortList, setShortList] = useState(true)
+
+  const changeListLength = () => {
+    setShortList(!shortList)
+  }
 
   return (
     <S.TopContainer>
@@ -22,7 +29,7 @@ const CreatePage = () => {
         </S.Tooltip>{" "}
         providers or create a new one.
       </div>
-      <WalletList walletsData={walletsData}/>
+      <WalletList walletsData={walletsData} shortList={shortList} changeListLength={changeListLength}/>
     </S.TopContainer>
   );
 };

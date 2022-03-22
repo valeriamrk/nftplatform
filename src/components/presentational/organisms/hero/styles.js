@@ -14,7 +14,7 @@ export const Container = styled.div`
     left: 0px;
     right: 0px;
     bottom: 0px;
-    background-image: url(https://lh3.googleusercontent.com/ujepnqpnL0nDQIHsWxlCXzyw4pf01yjz1Jmb4kAQHumJAPrSEj0-e3ABMZlZ1HEpJoqwOcY_kgnuJGzfXbd2Tijri66GXUtfN2MXQA=s250);
+    background-image: url(https://lh3.googleusercontent.com/H-LDthYRKPWJdIKEI3WrZFFpxetO77jl1ALd3t4BJQ3Qj661B3WfopzTJ1iNtjD4JqjsLLqblkfWNtaHEzRUsCcbLsUZEiVGkNGE=s550);
     background-size: cover;
     background-position: center;
     opacity: 0.3;
@@ -87,10 +87,15 @@ export const Author = styled.div`
   margin-left: 1rem; /* 16px */
 `;
 
-export const Name = styled.div``;
+export const Name = styled.div`
+  font-weight: 600;
+  font-size: 14px;
+`;
 
 export const Link = styled.a`
   color: #1868b7;
+  font-weight: 500;
+  font-size: 14px;
 `;
 
 export const InfoIcon = styled.div`

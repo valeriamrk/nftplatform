@@ -11,7 +11,7 @@ export const ListWrapper = styled.div`
   ${(props) =>
     props.sidebar &&
     css`
-      width: 300px;
+      width: 90%;
     `};
 `;
 
@@ -40,8 +40,15 @@ export const ListItemWrapper = styled.div`
     border-top-right-radius: 10px;
   }
   &:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+
   }
 `;
 
