@@ -10,7 +10,6 @@ export const allDataSlice = createSlice({
   reducers: {
     changeSidebarStatus: (state, action) => {
       state.sidebarIsOpened = !state.sidebarIsOpened;
-      console.log("sidebar");
     },
     changeSidebarStatusClose: (state) => {
       state.sidebarIsOpened = false;

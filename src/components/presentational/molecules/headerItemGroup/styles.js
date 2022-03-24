@@ -3,7 +3,8 @@ import styled from "styled-components/macro";
 export const HeaderItemGroup = styled.div`
 display: flex;
 align-items: center;
-justify-content: end;
+justify-content: center;
+height: 100%;
 `
 
 export const HeaderIcon = styled.div`

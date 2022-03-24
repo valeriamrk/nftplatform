@@ -2,6 +2,7 @@ import styled from "styled-components/macro";
 
 export const LogoGroup = styled.div`
 display: flex;
+padding-right: 180px;
 align-items: center;
 flex-direction: row;
 cursor: pointer;

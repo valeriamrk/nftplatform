@@ -19,6 +19,8 @@ const TopList = (props) => {
             floorPrice={element.floorPrice}
             owners={element.owners}
             items={element.items}
+            hoursGrow={element.hoursGrow}
+            daysGrow={element.daysGrow}
             />)}
     </S.ListWrapper>
   );

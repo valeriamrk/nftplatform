@@ -73,6 +73,33 @@ export const ListItem = styled.div`
   width: 125px;
   justify-content: flex-end;
 `;
+export const ListItemHours = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 125px;
+  justify-content: flex-end;
+  color: ${(props) => (props.hoursGrow ? "rgb(52, 199, 123)" : "rgb(235, 87, 87)")};
+
+`;
+
+const checkDaysGrow = (daysGrow) => {
+  if (daysGrow === null) {
+    return "white"
+  } else if (daysGrow === false){
+    return "rgb(235, 87, 87)"
+  }
+}
+
+export const ListItemDays = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 125px;
+  justify-content: flex-end;
+  color: ${(props) => (props.daysGrow ? "rgb(52, 199, 123)" : checkDaysGrow(props.daysGrow))};
+
+`;
 
 export const Avatar = styled.img`
   margin-left: 8px;

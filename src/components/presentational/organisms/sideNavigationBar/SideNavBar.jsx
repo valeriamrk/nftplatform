@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { WalletList } from "../../../presentational";
 import * as S from "./styles";
 import { IoPersonCircle } from "react-icons/io5";
 import { useSelector } from "react-redux";
+import {useOnClickOutside} from '../../../../utils/hooks/useOnClickOutside'
 
 const SideNavBar = (props) => {
   const walletsData = useSelector((state) => state.walletData.wallets);
 
   const { openNav, sidebarActive, handleSidebarStatusClose } = props;
 
+  const ref = useRef()
+  useOnClickOutside(ref, () => handleSidebarStatusClose())
+
   return (
-    <S.SideNav openNav={openNav} sidebarActive={sidebarActive} onClick={() => handleSidebarStatusClose()}>
+    <S.SideNav openNav={openNav} sidebarActive={sidebarActive} onClick={() => handleSidebarStatusClose()} ref={ref}>
       <S.Content onClick={(e) => e.stopPropagation()}>
       <S.NavHeader>
         <S.Icon>

@@ -5,23 +5,28 @@ import { MdOutlineAccountBalanceWallet } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 
 const HeaderItemGroup = (props) => {
-
-const {navbarLinks, handleSidebarStatus} = props
-
+  const { navbarLinks, handleSidebarStatus } = props;
+  const [selectedIndex, setSelectedIndex] = React.useState();
+  // const handleItemClick = (event, index, path) => {
+  //   setSelectedIndex(index);
+  //   navigate(path);
+  //   console.log(index)
+  // };
 
   return (
     <S.HeaderItemGroup>
-              {navbarLinks.map((element) =>
-            <HeaderItem
+      {navbarLinks.map((element, index) => (
+          <HeaderItem
             path={element.path}
             label={element.label}
-            />
-              )}
+            index={index}
+          />
+      ))}
       <S.HeaderIcon>
         <CgProfile />
       </S.HeaderIcon>
       <S.HeaderIcon>
-        <MdOutlineAccountBalanceWallet onClick={() => handleSidebarStatus()}/>
+        <MdOutlineAccountBalanceWallet onClick={() => handleSidebarStatus()} />
       </S.HeaderIcon>
     </S.HeaderItemGroup>
   );

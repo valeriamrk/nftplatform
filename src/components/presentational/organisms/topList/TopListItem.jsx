@@ -6,7 +6,7 @@ const TopListItem = (props) => {
     props;
 
   return (
-    <S.ListItemWrapper>
+    <S.ListItemWrapper {...props}>
       <S.FirstCell>
         {id} <S.Avatar src={avatar} alt="avatar" /> {author}
       </S.FirstCell>
@@ -18,8 +18,9 @@ const TopListItem = (props) => {
         />
         {volume}
       </S.ListItem>
-      <S.ListItem>{hours}</S.ListItem>
-      <S.ListItem>{days}</S.ListItem>
+      <S.ListItemHours {...props}>{hours}</S.ListItemHours>
+      {days === null ? (<S.ListItemDays>---</S.ListItemDays>) : (      <S.ListItemDays {...props}>{days}</S.ListItemDays>
+)}
       <S.ListItem>
         <S.EthLogo
           src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"

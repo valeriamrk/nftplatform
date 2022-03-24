@@ -4,10 +4,19 @@ import { useNavigate } from "react-router-dom";
 
 const HeaderItem = (props) => {
   const navigate = useNavigate();
+  // const [selectedIndex, setSelectedIndex] = React.useState();
 
-  const handleItemClick = (event, path) => {
-    navigate(path)
+  const { path, label, index } = props;
+
+  const handleItemClick = (event, index, path) => {
+    setSelectedIndex(index);
+    navigate(path);
   };
-  return <S.HeaderItem onClick={(event) => handleItemClick(event, props.path)}>{props.label}</S.HeaderItem>;
+
+  return (
+    <S.HeaderItem onClick={(event) => handleItemClick(event, index, path)} selected={selectedIndex === index}>
+      {label}
+    </S.HeaderItem>
+  );
 };
 export { HeaderItem };
