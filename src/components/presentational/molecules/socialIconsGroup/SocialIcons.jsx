@@ -11,12 +11,12 @@ const SocialIcons = () => {
     <S.Wrapper>
       <S.Header>Join the community</S.Header>
       <S.IconsGroup>
-        <MyButton icon><BsTwitter/></MyButton>
-        <MyButton icon><BsInstagram/></MyButton>
-        <MyButton icon><SiDiscord/></MyButton>
-        <MyButton icon><ImReddit/></MyButton>
-        <MyButton icon><BsYoutube/></MyButton>
-        <MyButton icon><BsEnvelope/></MyButton>
+        <a href="https://twitter.com/" target="_blank" rel="noreferrer"><MyButton icon><BsTwitter/></MyButton></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><MyButton icon><BsInstagram/></MyButton></a>
+        <a href="https://discord.com/" target="_blank" rel="noreferrer"><MyButton icon><SiDiscord/></MyButton></a>
+        <a href="https://www.reddit.com/" target="_blank" rel="noreferrer"><MyButton icon><ImReddit/></MyButton></a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noreferrer"><MyButton icon><BsYoutube/></MyButton></a>
+        <a href="#"><MyButton icon><BsEnvelope/></MyButton></a>
       </S.IconsGroup>
     </S.Wrapper>
   );

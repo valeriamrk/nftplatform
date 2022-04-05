@@ -6,15 +6,15 @@ const HeaderItem = (props) => {
   const navigate = useNavigate();
   // const [selectedIndex, setSelectedIndex] = React.useState();
 
-  const { path, label, index } = props;
+  const { path, label, index, itemClick } = props;
 
   const handleItemClick = (event, index, path) => {
-    setSelectedIndex(index);
+    itemClick(index);
     navigate(path);
   };
 
   return (
-    <S.HeaderItem onClick={(event) => handleItemClick(event, index, path)} selected={selectedIndex === index}>
+    <S.HeaderItem {...props} onClick={(event) => handleItemClick(event, index, path)} >
       {label}
     </S.HeaderItem>
   );

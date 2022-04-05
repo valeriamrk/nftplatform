@@ -1,10 +1,13 @@
 import * as S from "./styles";
-import React from "react";
+import React, { useEffect } from "react";
 import { SideNavBar, WalletList } from "../../../presentational";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 
 const CreatePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   const walletsData = useSelector((state) => state.walletData.wallets);
   // const shortList = true
   const [shortList, setShortList] = useState(true)

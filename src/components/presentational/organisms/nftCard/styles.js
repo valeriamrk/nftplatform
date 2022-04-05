@@ -103,7 +103,9 @@ display: flex;
   font-size: 1.25rem; /* 20px */
   line-height: 1.75rem; /* 28px */
   margin-right: 0.25rem; /* 8px */
-
+  &:hover {
+    color: red;
+  }
 `;
 
 export const LikeValue = styled.div`
@@ -111,7 +113,6 @@ export const LikeValue = styled.div`
   line-height: 1.75rem; /* 28px */
   margin-right: 0.75rem; /* 8px */
   display: flex;
-
 `;
 
 // wrapper: `bg-[#303339] flex-auto w-[14rem] h-[22rem] my-10 mx-5 rounded-2xl overflow-hidden cursor-pointer`,

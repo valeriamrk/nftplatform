@@ -2,6 +2,7 @@ import styled, { css } from "styled-components/macro";
 
 // Input field
 export const InputField = styled.input`
+  font-family: 'Poppins', sans-serif;
   width: 100%;
   height: 2.6rem;
   border-width: 0px;

@@ -72,7 +72,7 @@ margin-bottom: 0.5rem; /* 8px */
 `
 
 export const Title = styled.div`
-	font-size: 3rem; /* 48px */
+	font-size: 40px;
 line-height: 1;
 font-weight: 700;
 margin-bottom: 1rem; /* 16px */
@@ -109,7 +109,7 @@ export const CollectionStat = styled.div`
 	width: 25%;`
 
 export const StatValue = styled.div`
-font-size: 1.875rem; /* 30px */
+font-size: 24px;
 line-height: 2.25rem; /* 36px */
 font-weight: 700;
 width: 100%;
@@ -124,16 +124,16 @@ export const EthLogo = styled.img`
   `
 
 export const StatName = styled.div`
-font-size: 1.125rem; /* 18px */
+font-size: 14px;
 line-height: 1.75rem; /* 28px */
 width: 100%;
 text-align: center;
-margin-top: 0.25rem; /* 4px */
+margin-top: 4px;
 `
 
 export const Description = styled.div`
 color: #8a939b;
-font-size: 1.25rem; /* 20px */
+font-size: 16px;
 line-height: 1.75rem; /* 28px */
 width: max-content 25%;
 flex-wrap: wrap;
@@ -144,4 +144,5 @@ export const NftCardCollection = styled.div`
 display: flex;
 flex-wrap: wrap;
 color: white;
+justify-content: center;
 `

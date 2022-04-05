@@ -1,8 +1,10 @@
 import React from "react";
 import * as S from "./styles";
 import { BiHeart } from "react-icons/bi";
+import { LikesCounter } from "../../../presentational";
 
 const NftCard = (props) => {
+
   return (
     <S.Wrapper>
       <S.ImgContainer>
@@ -20,12 +22,7 @@ const NftCard = (props) => {
               <S.EthLogo src="https://storage.opensea.io/files/accae6b6fb3888cbff27a013729c22dc.svg" />
               {props.price}
             </S.PriceValue>
-            <S.Likes>
-              <S.LikeIcon>
-                <BiHeart />
-              </S.LikeIcon>
-              <S.LikeValue>{props.likes}</S.LikeValue>
-            </S.Likes>
+            <LikesCounter likes={props.likes} />
           </S.InfoRight>
         </S.Info>
       </S.Details>

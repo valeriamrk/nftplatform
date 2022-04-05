@@ -7,7 +7,7 @@ const SearchBar = (props) => {
  const {placeholder, white} = props
   return (
     <S.SearchBar {...props}>
-      <S.SearchIcon>
+      <S.SearchIcon {...props}>
         <AiOutlineSearch />
       </S.SearchIcon>
       <InputField placeholder={placeholder} white={white}/>

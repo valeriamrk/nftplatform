@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as S from "./styles";
 import { NftCard, SocialIconsCollection } from "../../../presentational";
 import { useSelector } from "react-redux";
 import { MdVerified } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 
 const Collections = (props) => {
   const nftCards = useSelector((state) => state.nftCardsData.nftCards);
-
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <S.CollectionsWrapper>
       <S.BannerImageContainer>
@@ -81,6 +84,7 @@ const Collections = (props) => {
       </S.InfoContainer>
       <S.NftCardCollection>
         {nftCards.map((element) => (
+          <Link to={`/opencard/${element.id}`}>
           <NftCard
             id={element.id}
             author={element.author}
@@ -88,7 +92,7 @@ const Collections = (props) => {
             img={element.img}
             price={element.price}
             likes={element.likes}
-          />
+          />        </Link>
         ))}
       </S.NftCardCollection>
     </S.CollectionsWrapper>

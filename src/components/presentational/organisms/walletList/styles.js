@@ -6,6 +6,7 @@ export const ListWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 40%;
+  height: 100%;
   margin-top: 40px;
   margin-bottom: 40px;
   ${(props) =>

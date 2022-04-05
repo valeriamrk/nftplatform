@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { MyButton, SideNavBar } from "../../../presentational";
 import * as S from "./styles";
 
@@ -13,8 +14,8 @@ const Hero = () => {
               OpenOcean is the world&apos;s first and largest NFT marketplace
             </S.Description>
             <S.BtnContainer>
-              <MyButton>Explore</MyButton>
-              <MyButton primary>Create</MyButton>
+              <Link to="/collections"><MyButton>Explore</MyButton></Link>
+              <Link to="/create"><MyButton primary>Create</MyButton></Link>
             </S.BtnContainer>
           </S.TextContainer>
           <S.CardContainer>

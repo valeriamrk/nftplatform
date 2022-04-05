@@ -31,6 +31,9 @@ export const Content = styled.div`
   flex-direction: column;
   background-color: #202225;
   width: 420px;
+  height: 100%;
+  overflow-x: hidden;
+
 `;
 
 export const NavHeader = styled.div`

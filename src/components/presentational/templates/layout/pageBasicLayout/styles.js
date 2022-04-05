@@ -7,7 +7,7 @@ export const Layout = styled.div`
 
 export const Header = styled.div`
 height: 72px;
-  padding: 1.2rem 0.8rem 1.2rem 0.8rem;
+  padding: 0px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;

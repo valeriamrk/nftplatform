@@ -1,6 +1,10 @@
 import styled, { css } from "styled-components/macro";
 
 export const MyButton = styled.button`
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
   border-style: none;
   position: relative;
   font-size: 1.125rem; /* 18px */
@@ -21,6 +25,7 @@ export const MyButton = styled.button`
     css`
       background-color: #363840;
       color: #e4e8ea;
+      border: 1px solid rgb(21, 27, 34);
       &:hover {
         background-color: #4c505c;
         cursor: pointer;
@@ -34,6 +39,18 @@ export const MyButton = styled.button`
       font-size: 16px;
       &:hover {
         background-color: #42a0ff;
+        cursor: pointer;
+      }
+    `};
+  ${(props) =>
+    props.big &&
+    css`
+      width: 300px;
+      background-color: #363840;
+      color: #e4e8ea;
+      border: 1px solid rgb(21, 27, 34);
+      &:hover {
+        background-color: #4c505c;
         cursor: pointer;
       }
     `};

@@ -4,11 +4,14 @@ import {
   TopNftPage,
   ResourcesPage,
   CreatePage,
+  OpenCard,
 } from "./components/presentational";
 import { MainPage, Hero } from "./components/presentational";
 import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 
 function App() {
+
   return (
     <div className="App">
       <Routes>
@@ -18,6 +21,7 @@ function App() {
           <Route path="/stats" element={<TopNftPage />} />
           <Route path="/create" element={<CreatePage/>} />
           <Route path="/resources" element={<ResourcesPage/>} />
+          <Route path="/opencard/:id" element={<OpenCard/>} />
         </Route>
       </Routes>
     </div>

@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as S from "./styles";
 import { HelpList, QuestionList, SearchBar } from "../../../presentational";
 import { useSelector } from "react-redux";
 
 const ResourcesPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   const helpItemsData = useSelector(
     (state) => state.helpCenterData.helpCenterItems
   );

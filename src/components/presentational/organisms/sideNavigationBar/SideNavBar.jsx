@@ -13,6 +13,12 @@ const SideNavBar = (props) => {
   const ref = useRef()
   useOnClickOutside(ref, () => handleSidebarStatusClose())
 
+  const [shortList, setShortList] = useState(true)
+
+  const changeListLength = () => {
+    setShortList(!shortList)
+  }
+
   return (
     <S.SideNav openNav={openNav} sidebarActive={sidebarActive} onClick={() => handleSidebarStatusClose()} ref={ref}>
       <S.Content onClick={(e) => e.stopPropagation()}>
@@ -34,7 +40,7 @@ const SideNavBar = (props) => {
         providers or create a new one.
       </S.Description>
       <S.WalletContainer>
-        <WalletList walletsData={walletsData} sidebar />
+        <WalletList walletsData={walletsData} sidebar shortList={shortList} changeListLength={changeListLength}/>
       </S.WalletContainer>
       </S.Content>
     </S.SideNav>

@@ -11,7 +11,7 @@ export const SearchBar = styled.div`
   border-radius: 0.8rem;
   &:hover {
     background-color: #4c505c;
-  }
+  };
   ${(props) =>
     props.white &&
     css`
@@ -34,5 +34,11 @@ export const SearchIcon = styled.div`
   margin-right: 0.75rem; /* 12px */
   font-weight: 700;
   font-size: 1.125rem; /* 18px */
-  line-height: 1.75rem; /* 28px */
+  line-height: 1.75rem;
+  ${(props) =>
+    props.white &&
+    css`
+      font-size: 24px; /* 18px */
+      color: black;
+    `};
 `;
