@@ -9,7 +9,7 @@ const HeaderItemGroup = (props) => {
   const { navbarLinks, handleSidebarStatus } = props;
   const [selectedIndex, setSelectedIndex] = React.useState();
   const itemClick = (index) => {
-    setSelectedIndex(index);
+      setSelectedIndex(index);
   };
 
   return (

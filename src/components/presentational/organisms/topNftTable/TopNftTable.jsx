@@ -22,80 +22,60 @@ const TopNftTable = (props) => {
     }
   };
 
-  const handleItemClick = (sortKey) => {
-    // let direction = 'ascending';
-    // if (
-    //   sortConfig &&
-    //   sortConfig.key === key &&
-    //   sortConfig.direction === 'ascending'
-    // ) {
-    //   direction = 'descending';
-    // }
-    // setSortConfig({ key, direction });
-    // console.log(sortConfig);
-
-    const ascSort = (a, b, sortKey) => {
-      const numA = Number(a[sortKey]);
-      const numB = Number(b[sortKey]);
-      if (numB < numA) return -1;
-      if (numB > numA) return 1;
-      if (numA == numB) return 0;
-    };
-
-    const descSort = (a, b, sortKey) => {
-      const numA = Number(a[sortKey]);
-      const numB = Number(b[sortKey]);
-      if (numB < numA) return 1;
-      if (numB > numA) return -1;
-      if (numA == numB) return 0;
-    };
-
-    const getComparator = (sortKey, sortDirection) => {
-      if (sortDirection === "descending") {
-        return (a, b) => descSort(a, b, sortKey);
-      } else {
-        return (a, b) => ascSort(a, b, sortKey);
-      }
-    };
-
-    const testArr = [...statsData];
-
-    testArr.sort(getComparator(sortKey, "kjhg"));
-
-    console.log(testArr);
+  const ascSort = (a, b, sortKey) => {
+    const numA = Number(a[sortKey]);
+    const numB = Number(b[sortKey]);
+    if (numB < numA) return -1;
+    if (numB > numA) return 1;
+    if (numA == numB) return 0;
   };
 
-  // const ascSort = (a, b, sortKey) => {
-  //   if (b[sortKey] < a[sortKey]) {
-  //     return -1;
-  //   }
-  //   if (b[sortKey] > a[sortKey]) {
-  //     return 1;
-  //   }
-  //   return 0;
-  // }
+  const descSort = (a, b, sortKey) => {
+    const numA = Number(a[sortKey]);
+    const numB = Number(b[sortKey]);
+    if (numB < numA) return 1;
+    if (numB > numA) return -1;
+    if (numA == numB) return 0;
+  };
 
-  // const descSort = (a, b, sortKey) => {
-  //   if (b[sortKey] < a[sortKey]) {
-  //     return 1;
-  //   }
-  //   if (b[sortKey] > a[sortKey]) {
-  //     return -1;
-  //   }
-  //   return 0;
-  // }
+  const getComparator = (sortKey, sortDirection) => {
+    if (sortDirection === "descending") {
+      return (a, b) => descSort(a, b, sortKey);
+    } else {
+      return (a, b) => ascSort(a, b, sortKey);
+    }
+  };
 
-  // const getComparator = (sortKey, sortDirection) => {
-  //   if (sortDirection === 'descending') {
-  //   return (a, b) => descSort(a, b, sortKey)
-  //   } else {
-  //     return (a, b) => ascSort(a, b, sortKey)
-  //   }
-  // }
+  const sortArray = () => {
+    if (sortConfig) {
+      const sortedData = [...statsData];
+    sortedData.sort(getComparator(sortConfig.sortKey, sortConfig.direction));
+    setTableData(sortedData) ;
+    } else {
+      setTableData(statsData);
+    }
+  };
+
+  const handleItemClick = (sortKey) => {
+    console.log(sortConfig)
+    let direction = "ascending";
+    if (
+      sortConfig &&
+      sortConfig.sortKey === sortKey &&
+      sortConfig.direction === "ascending"
+    ) {
+      direction = "descending";
+    }
+    setSortConfig({ sortKey, direction });
+  };
 
   useEffect(() => {
     filterData();
-  }, [selectedOption, statsData]);
+  }, [selectedOption]);
+
+  useEffect(() => {
+    sortArray();
+  }, [sortConfig]);
 
   return (
     <S.TableWrapper>

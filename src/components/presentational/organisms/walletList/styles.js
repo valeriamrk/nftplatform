@@ -33,7 +33,9 @@ export const ListItemWrapper = styled.div`
   padding: 16px 8px 16px 8px;
   cursor: pointer;
   &:hover {
-    box-shadow: 1px 3px 8px 3px #646072;
+    /* box-shadow: 1px 3px 8px 3px #646072; */
+    background-color: #363840;
+
   }
   &:first-child {
     border-top: 1px solid #646072;
@@ -49,7 +51,6 @@ export const ListItemWrapper = styled.div`
     border-bottom-right-radius: 10px;
     font-size: 18px;
     font-weight: 700;
-
   }
 `;
 
