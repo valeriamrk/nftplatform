@@ -1,9 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { MyButton, SideNavBar } from "../../../presentational";
 import * as S from "./styles";
 
 const Hero = () => {
+  const nftCards = useSelector((state) => state.nftCardsData.nftCards);
+
   return (
     <S.HeroWrapper>
       <S.Container>
@@ -14,32 +17,37 @@ const Hero = () => {
               OpenOcean is the world&apos;s first and largest NFT marketplace
             </S.Description>
             <S.BtnContainer>
-              <Link to="/collections"><MyButton>Explore</MyButton></Link>
-              <Link to="/create"><MyButton primary>Create</MyButton></Link>
+              <Link to="/collections">
+                <MyButton>Explore</MyButton>
+              </Link>
+              <Link to="/create">
+                <MyButton primary>Create</MyButton>
+              </Link>
             </S.BtnContainer>
           </S.TextContainer>
+          <Link to="/opencard/8">
+
           <S.CardContainer>
-            <S.MainImage
-              src="https://lh3.googleusercontent.com/H-LDthYRKPWJdIKEI3WrZFFpxetO77jl1ALd3t4BJQ3Qj661B3WfopzTJ1iNtjD4JqjsLLqblkfWNtaHEzRUsCcbLsUZEiVGkNGE=s550"
-              alt=""
-            />
-            <S.InfoContainer>
-            <S.Avatar
-                className="h-[2.25rem] rounded-full"
-                src="https://lh3.googleusercontent.com/vlwJvLR-2R2YhO3t8ROoGngbgMaADLCe5FsOrb5hrgbxIW6rhEneeY79pI7GUS1vj_05XDOjke9Da_GdE1jdtyhWgEW71DSBlevsMg=s80"
+              <S.MainImage
+                src="https://lh3.googleusercontent.com/CZhnyKg0UM92CtKJVOoP_vHMu2r5-HHEELb3U-pMx_iU-kTuQ8CsO6B5AudpvNT0JvBCtrI_qbAnIPUXEYwUgwzKD4AZ_lRODw9Oaw=w600"
                 alt=""
               />
-            <S.Author>
-              <S.Name>Dreams</S.Name>
-              <S.Link
-                  
-                  href="https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/2682286971963689196555642600990882324412171456684959899575241281247824052230"
-                >
-                  MeldaVNH
-                </S.Link>
-            </S.Author>
+            <S.InfoContainer>
+              <S.Avatar
+                className="h-[2.25rem] rounded-full"
+                src="https://lh3.googleusercontent.com/E8MVasG7noxC0Fa_duhnexc2xze1PzT1jzyeaHsytOC4722C2Zeo7EhUR8-T6mSem9-4XE5ylrCtoAsceZ_lXez_kTaMufV5pfLc3Fk=s130"
+                alt=""
+              />
+              <S.Author>
+                <S.Name>frangipani, the luscious chime</S.Name>
+                <Link to="/collections">
+                  <S.Link>Crypto Coven</S.Link>
+                </Link>
+              </S.Author>
             </S.InfoContainer>
           </S.CardContainer>
+          </Link>
+
         </S.ContentWrapper>
       </S.Container>
     </S.HeroWrapper>

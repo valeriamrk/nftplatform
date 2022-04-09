@@ -8,7 +8,7 @@ const SignUpGroup = () => {
       <S.Header>Stay in the loop</S.Header>
       <S.Description>
         Join our mailing list to stay in the loop with our newest feature
-        releases, NFT drops, and tips and tricks for navigating OpenSea.
+        releases, NFT drops, and tips and tricks for navigating OpenOcean.
       </S.Description>
       <S.SignUpWrapper>
         <S.EmailInput>

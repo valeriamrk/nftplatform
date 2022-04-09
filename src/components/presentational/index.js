@@ -37,6 +37,7 @@ export * from './organisms/imageCard/ImageCard'
 export * from './organisms/cardOptions/CardOptions'
 export * from './organisms/accordion/Accordion'
 export * from './organisms/accordion/SingleElementAccordion'
+export * from './organisms/faqItems/FaqItems'
 
 
 

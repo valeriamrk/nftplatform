@@ -47,6 +47,7 @@ export const Title = styled.div`
   font-weight: 600;
   letter-spacing: 0.25px;
   margin-left: 16px;
+  color: white;
 `;
 
 export const Label = styled.div`
@@ -67,4 +68,18 @@ export const Label = styled.div`
   font-weight: 400;
   letter-spacing: 0.25px;
   line-height: 1.5;
+`;
+
+export const NotFound = styled.div`
+width: 100%;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+margin-bottom: 40px;
+font-weight: 600;
+font-size: 18px;
+color: white;
+margin-top: 40px;
+color: #8a939b;
 `;

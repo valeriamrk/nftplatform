@@ -40,6 +40,7 @@ const Collections = (props) => {
             <S.AutorLink
               href="https://opensea.io/collection/cryptocoven"
               name="crypto_coven"
+              target="_blank"
             >
               crypto_coven
             </S.AutorLink>
@@ -84,7 +85,7 @@ const Collections = (props) => {
       </S.InfoContainer>
       <S.NftCardCollection>
         {nftCards.map((element) => (
-          <Link to={`/opencard/${element.id}`}>
+          // <Link to={`/opencard/${element.id}`}>
           <NftCard
             id={element.id}
             author={element.author}
@@ -92,7 +93,8 @@ const Collections = (props) => {
             img={element.img}
             price={element.price}
             likes={element.likes}
-          />        </Link>
+          />        
+          // </Link>
         ))}
       </S.NftCardCollection>
     </S.CollectionsWrapper>

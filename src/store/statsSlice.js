@@ -7,7 +7,7 @@ const initialState = {
       author: "Invisible Friends",
       avatar:
         "https://lh3.googleusercontent.com/lW22aEwUE0IqGaYm5HRiMS8DwkDwsdjPpprEqYnBqo2s7gSR-JqcYOjU9LM6p32ujG_YAEd72aDyox-pdCVK10G-u1qZ3zAsn2r9=s100",
-      volume: "15 903,15",
+      volume: "15903.15",
       hours: "+35.96",
       hoursGrow: true,
       days: "+49.05",
@@ -22,7 +22,7 @@ const initialState = {
       author: "Bored Ape Yacht Club",
       avatar:
         "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s130",
-      volume: "7 872,78",
+      volume: "7872.78",
       hours: "-53.82",
       hoursGrow: false,
       days: "+27.21",
@@ -37,7 +37,7 @@ const initialState = {
       author: "3Landers",
       avatar:
         "https://lh3.googleusercontent.com/jM8itRiSM3hI8RWokMkhR97JdoIzukU3DUEO-9MD3i6r6DnTBW6efbv1617zES0MfoiWzW4f3UaL9lgRr61vf3Cj4DDPIsk_XjNBXQ=s100",
-      volume: "7 619,46",
+      volume: "7619.46",
       hours: "-54.53",
       hoursGrow: false,
       days: "-46.57",
@@ -52,7 +52,7 @@ const initialState = {
       author: "WonderPals",
       avatar:
         "https://lh3.googleusercontent.com/DA_iUjt7S9PdmAANh0aqMkxYVhvGogTuKbMSzFO3uEnbvRRt5hn1B8DuN50HQpkRtH34QX7EOYYKIayz1q5KgZWfgLedNo7xBQzK=s100",
-      volume: "7 574,66",
+      volume: "7574.66",
       hours: "+246.68",
       hoursGrow: true,
       days: null,
@@ -67,7 +67,7 @@ const initialState = {
       author: "CryptoPunks",
       avatar:
         "https://lh3.googleusercontent.com/BdxvLseXcfl57BiuQcQYdJ64v-aI8din7WPk0Pgo3qQFhAUH-B6i-dCqqc_mCkRIzULmwzwecnohLhrcH8A9mpWIZqA7ygc52Sr81hE=s100",
-      volume: "5 892,76",
+      volume: "5892.76",
       hours: "-15.30",
       hoursGrow: false,
       days: "+58.63",
@@ -82,7 +82,7 @@ const initialState = {
       author: "HOWLERZ",
       avatar:
         "https://lh3.googleusercontent.com/x6hvOIWMQoPlIGwDAhpZCm4NesFGCwtrF6tv7UNu6vDasx6WxqW80WZ7w_vvMd6rVil6orhfeBmCk9GDGVUCYfP78gzFDb30usxWOA=s100",
-      volume: "5 773",
+      volume: "5773",
       hours: "+14.94",
       hoursGrow: true,
       days: null,
@@ -97,7 +97,7 @@ const initialState = {
       author: "CLONE X - X TAKASHI MURAKAMI",
       avatar:
         "https://lh3.googleusercontent.com/XN0XuD8Uh3jyRWNtPTFeXJg_ht8m5ofDx6aHklOiy4amhFuWUa0JaR6It49AH8tlnYS386Q0TW_-Lmedn0UET_ko1a3CbJGeu5iHMg=s100",
-      volume: "5 150,81",
+      volume: "5150.81",
       hours: "+58.65",
       hoursGrow: true,
       days: "+8.98",
@@ -112,7 +112,7 @@ const initialState = {
       author: "Antonym: GENESIS",
       avatar:
         "https://lh3.googleusercontent.com/VvaQMGvYpCRISPBOo4ZgI-9xmZq2XZnRtp3veKYMFinA1jN8Ab0EsVRKWQm0rIy8kN8qdibhDUe7lxVZKuMgg57bzo3mOANKb6b9tQ=s100",
-      volume: "4 152,42",
+      volume: "4152.42",
       hours: "-8.13",
       hoursGrow: false,
       days: null,
@@ -127,7 +127,7 @@ const initialState = {
       author: "NFT Worlds",
       avatar:
         "https://lh3.googleusercontent.com/DIafQlRW63pQ8UJqmdQBBOHZcubAE9rAkbovVx_WU_-TmIg3hF7z0y60gUGvah85_uYVgBxmhNfWUXwajaUmYZsrCPp8ZdYE0Z-wrt0=s100",
-      volume: "3 777,09",
+      volume: "3777.09",
       hours: "+147.28",
       hoursGrow: true,
       days: "-55.92",
@@ -142,7 +142,7 @@ const initialState = {
       author: "Azuki",
       avatar:
         "https://lh3.googleusercontent.com/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT=s100",
-      volume: "3 761,4",
+      volume: "3761.4",
       hours: "+112.88",
       hoursGrow: true,
       days: "-34.76",
@@ -157,7 +157,7 @@ const initialState = {
       author: "DEGEN TOONZ COLLECTION",
       avatar:
         "https://lh3.googleusercontent.com/3Rk7PFs3XX1ja50aKi8lxh9x67yNX5kZLti7gPlHvWsS7iuXSUdQGctoOXtto7uLLLnvwxe1uhWN6WmmZvVWCcQ-Qm7a8K2KFmEZJC4=s100",
-      volume: "3 560,84",
+      volume: "3560.84",
       hours: "+100.23",
       hoursGrow: true,
       days: "+156.83",
@@ -172,7 +172,7 @@ const initialState = {
       author: "Mutant Ape Yacht Club",
       avatar:
         "https://lh3.googleusercontent.com/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI=s100",
-      volume: "3 405,6",
+      volume: "3405.6",
       hours: "+3.62",
       hoursGrow: true,
       days: "-27.97",
@@ -187,7 +187,7 @@ const initialState = {
       author: "Starcatchers",
       avatar:
         "https://lh3.googleusercontent.com/uRZrWesOYmPJBCQV-YFcGslv6HncNKMmSkMCtUxGI1uOLVm713TPmN9BIs35-jEg8dXvgUnhxy0Udyj4qwZjNPliNSTP5DtiS7vkXw=s100",
-      volume: "3 355,02",
+      volume: "3355.02",
       hours: "-28.69",
       hoursGrow: false,
       days: "-0.42",
@@ -202,7 +202,7 @@ const initialState = {
       author: "The Doggies (Snoop Dogg)",
       avatar:
         "https://lh3.googleusercontent.com/ufumJQN9NwT0U5jh_suJP5cLRIjyE38hirVdBChQLe-ghnt1RomIARfxSNmR6fdMQC0OIgjVQHhhduUfcxiRVrfHpihrXSW-SU5J=s100",
-      volume: "3 203,25",
+      volume: "3203.25",
       hours: "-53.81",
       hoursGrow: false,
       days: "+13.35",
@@ -217,7 +217,7 @@ const initialState = {
       author: "Pixelmon - Generation 1",
       avatar:
         "https://lh3.googleusercontent.com/hqDSpTYhSy--C3l8Q0yKGGCs1h9DSwlqvNGK3WXh3QS-ce-VYWOfo-F8unGDdGhhJA6v8Vqw6mYyMr8MPecCEYHVAKXh4tn24THo=s100",
-      volume: "3 082,28",
+      volume: "3082.28",
       hours: "-4.02",
       hoursGrow: false,
       days: "+352.29",
@@ -232,7 +232,7 @@ const initialState = {
       author: "DentedFeelsNFT",
       avatar:
         "https://lh3.googleusercontent.com/0E-6rL-B-dLFiu-9tipTI7zXaaK0DHEQ4699BVC0nMQ9XRIqgeJ7XrhER-bXYSEsSIex-5CW2fr7bUaCFV-978YiWABy8nKYrxOp=s100",
-      volume: "2 874,89",
+      volume: "2874.89",
       hours: "-27.81",
       hoursGrow: false,
       days: "+470.76",
@@ -247,7 +247,7 @@ const initialState = {
       author: "The Sandbox",
       avatar:
         "https://lh3.googleusercontent.com/SXH8tW1siikB80rwCRnjm1a5xM_MwTg9Xl9Db6mioIk9HIlDM09pVoSR7GKJgS6ulSUpgW9BDtMk_ePX_NKgO9A=s100",
-      volume: "2 476,18",
+      volume: "2476.18",
       hours: "+51.90",
       hoursGrow: true,
       days: "-11.17",
@@ -262,7 +262,7 @@ const initialState = {
       author: "mfers",
       avatar:
         "https://lh3.googleusercontent.com/J2iIgy5_gmA8IS6sXGKGZeFVZwhldQylk7w7fLepTE9S7ICPCn_dlo8kypX8Ju0N6wvLVOKsbP_7bNGd8cpKmWhFQmqMXOC8q2sOdqw=s100",
-      volume: "2 314,2",
+      volume: "2314.2",
       hours: "+81.11",
       hoursGrow: true,
       days: "-73.03",
@@ -277,7 +277,7 @@ const initialState = {
       author: "Doodles",
       avatar:
         "https://lh3.googleusercontent.com/7B0qai02OdHA8P_EOVK672qUliyjQdQDGNrACxs7WnTgZAkJa_wWURnIFKeOh5VTf8cfTqW3wQpozGedaC9mteKphEOtztls02RlWQ=s100",
-      volume: "2 178,67",
+      volume: "2178.67",
       hours: "-1.21",
       hoursGrow: false,
       days: "-23.08",
@@ -292,7 +292,7 @@ const initialState = {
       author: "tubby cats by tubby collective",
       avatar:
         "https://lh3.googleusercontent.com/XHZY9623keDQqFSDHKqOdcjD99Y7N82K1egYRM2Mm1Z-Jxn5myrkKiC5NBktWKStVtTzDzwELy9dNpzTWJTIkLsdMIxUHI86jduQ=s100",
-      volume: "2 123,58",
+      volume: "2123.58",
       hours: "+2.42",
       hoursGrow: true,
       days: "-82.56",

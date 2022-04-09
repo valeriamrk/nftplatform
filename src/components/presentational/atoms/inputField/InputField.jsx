@@ -2,8 +2,10 @@ import React from "react";
 import * as S from "./styles";
 
 const InputField = (props) => {
+const {searchValue, setSearchValue} = props
+
   return (
-      <S.InputField {...props}  onChange={(event) => props.setValue(event.target.value)}  />
+      <S.InputField {...props} value={searchValue} onChange={(event) => setSearchValue(event.target.value)}  />
   );
 };
 

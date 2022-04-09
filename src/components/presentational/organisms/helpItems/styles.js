@@ -44,3 +44,16 @@ export const Description = styled.div`
   letter-spacing: 0.25px;
   margin-top: 10px;
 `;
+
+export const NotFound = styled.div`
+width: 100%;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+margin-bottom: 40px;
+font-weight: 600;
+font-size: 18px;
+color: white;
+margin-top: 40px;
+`;

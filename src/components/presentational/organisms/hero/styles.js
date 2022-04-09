@@ -14,7 +14,7 @@ export const Container = styled.div`
     left: 0px;
     right: 0px;
     bottom: 0px;
-    background-image: url(https://lh3.googleusercontent.com/H-LDthYRKPWJdIKEI3WrZFFpxetO77jl1ALd3t4BJQ3Qj661B3WfopzTJ1iNtjD4JqjsLLqblkfWNtaHEzRUsCcbLsUZEiVGkNGE=s550);
+    background-image: url(https://lh3.googleusercontent.com/CZhnyKg0UM92CtKJVOoP_vHMu2r5-HHEELb3U-pMx_iU-kTuQ8CsO6B5AudpvNT0JvBCtrI_qbAnIPUXEYwUgwzKD4AZ_lRODw9Oaw=w600);
     background-size: cover;
     background-position: center;
     opacity: 0.3;
@@ -71,6 +71,7 @@ export const InfoContainer = styled.div`
 `;
 
 export const MainImage = styled.img`
+height: 480px;
   border-top-right-radius: 0.5rem; /* 8px */
   border-top-left-radius: 0.5rem; /* 8px */
 `;
@@ -92,10 +93,16 @@ export const Name = styled.div`
   font-size: 14px;
 `;
 
-export const Link = styled.a`
-  color: #1868b7;
-  font-weight: 500;
+export const Link = styled.div`
+  color:  rgb(32, 129, 226);
+  font-weight: 700;
   font-size: 14px;
+  cursor: pointer;
+  z-index: 2;
+  &:hover {
+    
+    color: #1868b7;
+  }
 `;
 
 export const InfoIcon = styled.div`

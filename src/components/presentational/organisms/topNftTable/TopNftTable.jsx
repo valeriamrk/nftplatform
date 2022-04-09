@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import * as S from "./styles";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { useState } from "react";
@@ -10,6 +10,18 @@ const TopNftTable = (props) => {
   const [tableData, setTableData] = useState(statsData);
   const [sortConfig, setSortConfig] = useState();
 
+
+  // useEffect(() => {
+  //   filterData();
+  // }, [selectedOption]);
+
+  // useEffect(() => {
+  //   sortArray();
+  // }, [sortConfig]);
+  // useEffect(() => {
+  //   filteredAndSortedData();
+  // }, []);
+
   const filterData = () => {
     if (selectedOption.label !== "All Categories") {
       const filteredData = statsData.filter(
@@ -19,6 +31,25 @@ const TopNftTable = (props) => {
       setTableData(filteredData);
     } else {
       setTableData(statsData);
+    }
+  };
+
+
+  const sortArray = () => {
+    if (sortConfig) {
+      const sortedData = [...statsData];
+      sortedData.sort(getComparator(sortConfig.sortKey, sortConfig.direction));
+      setTableData(sortedData);
+    } else {
+      setTableData(statsData);
+    }
+  };
+
+  const getComparator = (sortKey, sortDirection) => {
+    if (sortDirection === "descending") {
+      return (a, b) => descSort(a, b, sortKey);
+    } else {
+      return (a, b) => ascSort(a, b, sortKey);
     }
   };
 
@@ -38,26 +69,14 @@ const TopNftTable = (props) => {
     if (numA == numB) return 0;
   };
 
-  const getComparator = (sortKey, sortDirection) => {
-    if (sortDirection === "descending") {
-      return (a, b) => descSort(a, b, sortKey);
-    } else {
-      return (a, b) => ascSort(a, b, sortKey);
-    }
-  };
+  // const copyData = [...statsData]
+  // const filteredAndSortedData = copyData.filter((element) => element.category === 'Collectibles')
+  // .sort(getComparator("owners", "descending"));
+  // setTableData(filteredAndSortedData)
 
-  const sortArray = () => {
-    if (sortConfig) {
-      const sortedData = [...statsData];
-    sortedData.sort(getComparator(sortConfig.sortKey, sortConfig.direction));
-    setTableData(sortedData) ;
-    } else {
-      setTableData(statsData);
-    }
-  };
+
 
   const handleItemClick = (sortKey) => {
-    console.log(sortConfig)
     let direction = "ascending";
     if (
       sortConfig &&
@@ -68,14 +87,6 @@ const TopNftTable = (props) => {
     }
     setSortConfig({ sortKey, direction });
   };
-
-  useEffect(() => {
-    filterData();
-  }, [selectedOption]);
-
-  useEffect(() => {
-    sortArray();
-  }, [sortConfig]);
 
   return (
     <S.TableWrapper>
