@@ -10,9 +10,8 @@ const SearchResults = (props) => {
     <S.ResultsContainer>
       {filterData.length !== 0 &&
         filterData.map((element) => (
-          <S.ResultItem>
-            <Link to={`/opencard/${element.id}`}>
-              <S.ResultItem>
+          <S.StyledLink to={`/opencard/${element.id}`}>
+            <S.ResultItem onClick={(e) => e.stopPropagation()}>
                 <S.LeftContainer>
                   <S.Logo src={element.img} />
                   <S.Name>{element.nft_name}</S.Name>
@@ -20,10 +19,9 @@ const SearchResults = (props) => {
                 <S.RightContainer>
                   <FaEthereum />
                   <S.Price>{element.price}</S.Price>
-                </S.RightContainer>{" "}
-              </S.ResultItem>
-            </Link>
-          </S.ResultItem>
+                </S.RightContainer>
+            </S.ResultItem>{" "}
+          </S.StyledLink>
         ))}
     </S.ResultsContainer>
   );

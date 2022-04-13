@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components/macro";
 import { Link } from "react-router-dom";
 
-
 export const GlobalSearchContainer = styled.div`
   /* display: flex; */
   /* flex: 1 1 0%; */
@@ -45,7 +44,6 @@ export const ResultsContainer = styled.div`
 `;
 
 export const ResultItem = styled.div`
-display: flex;
   padding: 16px;
   width: 100%;
   border-top: 1px solid #202225;
@@ -67,6 +65,7 @@ display: flex;
   }
 `;
 
+
 export const Logo = styled.img`
   margin-left: 16px;
   margin-right: 16px;
@@ -79,7 +78,7 @@ export const Name = styled.div`
   font-size: 14px;
 `;
 export const Price = styled.div`
-margin-left: 8px;
+  margin-left: 8px;
 `;
 
 export const RightContainer = styled.div`
@@ -97,4 +96,8 @@ export const LeftContainer = styled.div`
   font-weight: 600;
   font-size: 14px;
 `;
-
+export const StyledLink = styled(Link)`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+`;

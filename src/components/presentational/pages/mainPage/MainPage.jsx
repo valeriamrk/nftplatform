@@ -33,7 +33,7 @@ const MainPage = () => {
   const [searchValue, setSearchValue] = useState("");
 
 
-  const handleFilter = (event) => {
+  const globalFilter = (event) => {
     const searchCard = event.target.value;
     setSearchValue(searchCard);  
     const filterData= nftCards.filter((element) => {
@@ -45,6 +45,11 @@ const MainPage = () => {
       setFilteredData(filterData)
     }
   }
+
+  const clearInput = () => {
+    setFilteredData([]);
+    setSearchValue("");
+  };
 
 
 
@@ -73,7 +78,7 @@ const handleSidebarStatusClose = () => {
         <PageBasicLayout.PageHeader>
           <LogoGroup />
           {/* <SearchBar placeholder="Search items, collections, and accounts"/> */}
-          <GlobalSearch filterData={filteredData} searchValue={searchValue} setSearchValue={setSearchValue} handleFilter={handleFilter} />
+          <GlobalSearch filterData={filteredData} searchValue={searchValue} setSearchValue={setSearchValue} handleFilter={globalFilter} clearInput={clearInput}/>
           <HeaderItemGroup navbarLinks={navbarLinks} handleSidebarStatus={handleSidebarStatus}/>
           {/* <HeaderItemGroup navbarLinks={navbarLinks} handleOpenNav={handleOpenNav} /> */}
         </PageBasicLayout.PageHeader>

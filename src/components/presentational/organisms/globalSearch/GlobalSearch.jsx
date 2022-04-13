@@ -4,7 +4,9 @@ import { SearchBar, SearchResults } from "../../../presentational";
 import { FaEthereum } from "react-icons/fa";
 
 const GlobalSearch = (props) => {
-  const { filterData, searchValue, setSearchValue, handleFilter } = props;
+  const { filterData, searchValue, setSearchValue, handleFilter, clearInput } = props;
+
+
   return (
     <S.GlobalSearchContainer>
       <S.SearchBarContainer>
@@ -13,6 +15,7 @@ const GlobalSearch = (props) => {
           searchValue={searchValue}
           setSearchValue={setSearchValue}
           handleFilter={handleFilter}
+          clearInput={clearInput}
         />
       </S.SearchBarContainer>
       {/* {searchValue ? (    <S.ResultsContainer>    {searchedData.map((element) => (
