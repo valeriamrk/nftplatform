@@ -20,6 +20,7 @@ const ResourcesPage = () => {
   );
 
   const [searchValue, setSearchValue] = useState("");
+  
 
   const filteredHelpItems = helpItemsData.filter((element) => {
     return (

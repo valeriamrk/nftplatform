@@ -11,13 +11,14 @@ const TopNftTable = (props) => {
   const [sortConfig, setSortConfig] = useState();
 
 
-  // useEffect(() => {
-  //   filterData();
-  // }, [selectedOption]);
+  useEffect(() => {
+    filterData();
+  }, [selectedOption]);
 
-  // useEffect(() => {
-  //   sortArray();
-  // }, [sortConfig]);
+  useEffect(() => {
+    sortArray();
+  }, [sortConfig]);
+
   // useEffect(() => {
   //   filteredAndSortedData();
   // }, []);

@@ -6,6 +6,7 @@ import {
   HeaderItemGroup,
   Footer,
   SideNavBar,
+  GlobalSearch,
 } from "../../../presentational";
 import { Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -22,6 +23,30 @@ const MainPage = () => {
   );
 
   const sidebarData = useSelector((state) => state.allData.sidebarIsOpened);
+
+  const nftCards = useSelector(
+    (state) => state.nftCardsData.nftCards
+
+  );  
+
+  const [filteredData, setFilteredData] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
+
+
+  const handleFilter = (event) => {
+    const searchCard = event.target.value;
+    setSearchValue(searchCard);  
+    const filterData= nftCards.filter((element) => {
+    return element.nft_name.toLowerCase().includes(searchCard.toLowerCase());
+  });  
+    if (searchCard === "") {
+      setFilteredData([])
+    } else {
+      setFilteredData(filterData)
+    }
+  }
+
+
 
 
 //   const [openNav, setOpenNav] = useState(false)
@@ -47,7 +72,8 @@ const handleSidebarStatusClose = () => {
       <PageBasicLayout>
         <PageBasicLayout.PageHeader>
           <LogoGroup />
-          <SearchBar placeholder="Search items, collections, and accounts"/>
+          {/* <SearchBar placeholder="Search items, collections, and accounts"/> */}
+          <GlobalSearch filterData={filteredData} searchValue={searchValue} setSearchValue={setSearchValue} handleFilter={handleFilter} />
           <HeaderItemGroup navbarLinks={navbarLinks} handleSidebarStatus={handleSidebarStatus}/>
           {/* <HeaderItemGroup navbarLinks={navbarLinks} handleOpenNav={handleOpenNav} /> */}
         </PageBasicLayout.PageHeader>

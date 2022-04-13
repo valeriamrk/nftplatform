@@ -38,6 +38,8 @@ export * from './organisms/cardOptions/CardOptions'
 export * from './organisms/accordion/Accordion'
 export * from './organisms/accordion/SingleElementAccordion'
 export * from './organisms/faqItems/FaqItems'
+export * from './organisms/globalSearch/GlobalSearch'
+export * from './organisms/globalSearch/SearchResults'
 
 
 
