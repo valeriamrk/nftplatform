@@ -23,7 +23,8 @@ const CardOptions = () => {
           >
             crypto_coven
           </S.AutorLink>
-          <MdVerified />
+          <S.Verified><MdVerified /></S.Verified>
+          
         </S.CreatedBy>
         <S.Text>
           You are a WITCH woven from the strings of a windchime. You dye your

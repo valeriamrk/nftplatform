@@ -48,6 +48,8 @@ export const Title = styled.div`
   letter-spacing: 0.25px;
   margin-left: 16px;
   color: white;
+  color: ${(props) => props.theme.fontsColor.primeFont};
+
 `;
 
 export const Label = styled.div`
@@ -60,6 +62,8 @@ export const Label = styled.div`
   max-width: 100%;
   text-align: left;
   padding: 16px 0px 16px 0px;
+  color: ${(props) => props.theme.fontsColor.primeFont};
+
   &:hover {
     cursor: pointer;
     font-weight: 500;

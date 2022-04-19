@@ -30,23 +30,26 @@ export const Icon = styled.div`
 
 export const AccTitle = styled.div`
   width: 100%;
-  color: white;
+  color: ${(props) => props.theme.fontsColor.primeFont};
+
   font-size: 16px;
   font-weight: 600;
-  background-color: rgb(38, 43, 47);
-  border-top: 1px solid rgb(21, 27, 34);
-  border-left: 1px solid rgb(21, 27, 34);
-  border-right: 1px solid rgb(21, 27, 34);
+  /* background-color: rgb(38, 43, 47); */
+  background-color: ${(props) => props.theme.accordion.titleBackgroundColor};
+
+  border: ${(props) => props.theme.card.border};
+
   padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  &:last-child {
+  /* &:last-child {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-  };
+
+  }; */
 `;
 
 export const LeftTitle = styled.div`
@@ -59,16 +62,16 @@ justify-content: flex-start;
 
 export const AccPanel = styled.div`
   padding: 20px;
-  background-color: rgb(48, 51, 57);
-  border-left: 1px solid rgb(21, 27, 34);
-  border-right: 1px solid rgb(21, 27, 34);
+  color: ${(props) => props.theme.fontsColor.secFont};
+  background-color: ${(props) => props.theme.accordion.panelBackgroundColor};
+  border: ${(props) => props.theme.card.border};
+
   display: none;
   ${(props) =>
     props.active &&
     css`
       transition: max-height 0.2s ease-out;
       display: flex;
-
     `};
     &:last-child {
     border-bottom-right-radius: 10px;
@@ -87,14 +90,12 @@ margin-top: 20px;
 
 export const SingleAccTitle = styled.div`
   width: 100%;
-  color: white;
+  color: ${(props) => props.theme.fontsColor.primeFont};
+
   font-size: 16px;
   font-weight: 600;
-  background-color: rgb(38, 43, 47);
-  border-top: 1px solid rgb(21, 27, 34);
-  border-left: 1px solid rgb(21, 27, 34);
-  border-right: 1px solid rgb(21, 27, 34);
-  border-bottom: 1px solid rgb(21, 27, 34);
+  background-color: ${(props) => props.theme.accordion.titleBackgroundColor};
+  border: ${(props) => props.theme.card.border};
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -114,10 +115,9 @@ export const SingleAccTitle = styled.div`
 
 export const SingleAccPanel = styled.div`
   padding: 20px;
-  background-color: rgb(48, 51, 57);
-  border-left: 1px solid rgb(21, 27, 34);
-  border-right: 1px solid rgb(21, 27, 34);
-  border-bottom: 1px solid rgb(21, 27, 34);
+  color: ${(props) => props.theme.fontsColor.secFont};
+  background-color: ${(props) => props.theme.accordion.panelBackgroundColor};
+  border: ${(props) => props.theme.card.border};
   display: none;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;

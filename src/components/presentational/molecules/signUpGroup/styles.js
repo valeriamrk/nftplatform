@@ -29,9 +29,10 @@ export const EmailInput = styled.div`
   margin-right: 0.8rem;
   width: max-content;
   align-items: center;
-  background-color: #363840;
+  background-color: ${(props) => props.theme.searchBar.searchbarColor};
   border-radius: 0.8rem;
   &:hover {
-    background-color: #4c505c;
+    background-color: ${(props) => props.theme.searchBar.hoverColor};
+
   }
 `;

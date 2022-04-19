@@ -40,9 +40,15 @@ export const ProfileImg = styled.img`
 	width: 10rem; /* 160px */
   height: 10rem; /* 160px */
   object-fit: cover;
-  border: 4px solid #202225 ;
+  border: 2px solid #202225 ;
   border-radius: 9999px;
   margin-top: -4rem;
+`
+export const Verified = styled.div`
+color: #2081e2;
+font-size: 16px;
+margin-right: 8px;
+display: flex;
 `
 
 export const SocialIconsContainer = styled.div`
@@ -75,7 +81,10 @@ export const Title = styled.div`
 	font-size: 40px;
 line-height: 1;
 font-weight: 700;
+margin-top: 20px;
 margin-bottom: 1rem; /* 16px */
+color: ${(props) => props.theme.fontsColor.primeFont};
+
 `
 
 export const CreatedBy = styled.div`
@@ -85,6 +94,8 @@ margin-bottom: 1rem; /* 16px */
 display: flex;
 justify-content: center;
 align-items: center;
+color: ${(props) => props.theme.fontsColor.primeFont};
+
 
 `
 export const AutorLink = styled.a`
@@ -101,6 +112,7 @@ justify-content: space-between;
 padding-top: 1rem; /* 16px */
 padding-bottom: 1rem; /* 16px */
 border: 1px solid #151b22;
+border: ${(props) => props.theme.searchBar.border};
 border-radius: 0.75rem; /* 12px */
 margin-bottom: 1rem; /* 16px */
 `
@@ -116,6 +128,8 @@ width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
+color: ${(props) => props.theme.fontsColor.primeFont};
+
 `
 
 export const EthLogo = styled.img`
@@ -129,6 +143,8 @@ line-height: 1.75rem; /* 28px */
 width: 100%;
 text-align: center;
 margin-top: 4px;
+color: ${(props) => props.theme.fontsColor.secFont};
+
 `
 
 export const Description = styled.div`

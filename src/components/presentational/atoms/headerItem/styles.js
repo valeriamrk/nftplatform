@@ -10,8 +10,10 @@ padding-left: 1rem;
 padding-right: 1rem;
 font-weight: 700;
 color: #c8cacd;
+color: ${(props) => props.theme.fontsColor.secFont};
 &:hover {
   color: white;
+  color: ${(props) => props.theme.fontsColor.primeFont};
   cursor: pointer;
 ;
 };

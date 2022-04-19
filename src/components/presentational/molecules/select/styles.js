@@ -9,6 +9,7 @@ export const SelectWrapper = styled.select`
   font-size: 14.5px;
   font-weight: 600;
   color: white;
+
   border: 1px solid rgb(21, 27, 34);
   border-radius: 10px;
   &:hover {
@@ -30,6 +31,7 @@ export const Label = styled.label`
   left: 3px;
   background-color: red;
   font-size: 20px;
+
 `;
 
 
@@ -47,13 +49,18 @@ export const DropDownHeader = styled.div`
   padding: 16px;
   font-family: "Poppins", sans-serif;
   background-color: #202225;
+  background-color:${(props) => props.theme.mySelect.headerBackgroundColor};
   font-size: 14.5px;
   font-weight: 600;
   color: white;
+  color: ${(props) => props.theme.fontsColor.primeFont};
   border: 1px solid rgb(21, 27, 34);
+  border:${(props) => props.theme.mySelect.border};
+
   border-radius: 10px;
   &:hover {
     background-color: #363840;
+    background-color:${(props) => props.theme.mySelect.headerHoverBackgroundColor};
     cursor: pointer;
   }
 `;
@@ -66,13 +73,14 @@ export const DropDownListContainer = styled.div`
   border-radius: 10px;
   overflow: auto;
   overflow-x: hidden;
-  background-color: #363840;
   background-color: #4c505c;
+  background-color:${(props) => props.theme.mySelect.drDownListBackgroundColor};
+
   font-size: 14.5px;
   font-weight: 600;
-  border: 1px solid rgb(21, 27, 34);
+  border: ${(props) => props.theme.mySelect.border};
   box-sizing: border-box;
-  color: white;
+  color: ${(props) => props.theme.fontsColor.primeFont};
 `;
 
 export const ListItem = styled.div`
@@ -83,9 +91,12 @@ justify-content: flex-start;
   padding: 16px;
   font-size: 14.5px;
   border-bottom: 1px solid rgb(21, 27, 34);
+  border-bottom: ${(props) => props.theme.mySelect.border};
   font-weight: 600;
   &:hover {
     background-color: #363840;
+    background-color:${(props) => props.theme.mySelect.drDownListHoverBackgroundColor};
+
     cursor: pointer;
   }
 `;

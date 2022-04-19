@@ -27,18 +27,21 @@ export const ResultsContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  color: white;
+  /* color: white; */
+  color: ${(props) => props.theme.fontsColor.primeFont};
+
   z-index: 9999;
   position: absolute;
-  background-color: #4c505c;
+  /* background-color: #4c505c; */
+  background-color:${(props) => props.theme.mySelect.drDownListBackgroundColor};
   width: 100%;
   margin: 2px;
   border-radius: 10px;
   &:first-child {
-    border-top: none;
+    /* border-top: none; */
   }
   &:last-child {
-    border-bottom: none;
+    /* border-bottom: none; */
   }
   /* visibility: hidden; */
 `;
@@ -46,8 +49,8 @@ export const ResultsContainer = styled.div`
 export const ResultItem = styled.div`
   padding: 16px;
   width: 100%;
-  border-top: 1px solid #202225;
-  &:first-child {
+  /* border-top: 1px solid #202225; */
+  /* &:first-child {
     border-top: none;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -55,13 +58,14 @@ export const ResultItem = styled.div`
   &:last-child {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-  }
+  } */
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
   &:hover {
-    background-color: #363840;
+    background-color:${(props) => props.theme.mySelect.drDownListHoverBackgroundColor};
+    
   }
 `;
 
@@ -100,4 +104,9 @@ export const StyledLink = styled(Link)`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  border: ${(props) => props.theme.nftTable.border};
+&:hover {
+  box-shadow: ${(props) => props.theme.nftTable.boxShadow};
+}
+
 `;

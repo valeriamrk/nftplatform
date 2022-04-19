@@ -5,12 +5,11 @@ import { useSelector } from "react-redux";
 import { MdVerified } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-
 const Collections = (props) => {
   const nftCards = useSelector((state) => state.nftCardsData.nftCards);
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <S.CollectionsWrapper>
       <S.BannerImageContainer>
@@ -44,7 +43,9 @@ const Collections = (props) => {
             >
               crypto_coven
             </S.AutorLink>
-            <MdVerified/>
+            <S.Verified>
+              <MdVerified />
+            </S.Verified>
           </S.CreatedBy>
         </S.MidRow>
         <S.MidRow>
@@ -93,7 +94,7 @@ const Collections = (props) => {
             img={element.img}
             price={element.price}
             likes={element.likes}
-          />        
+          />
           // </Link>
         ))}
       </S.NftCardCollection>

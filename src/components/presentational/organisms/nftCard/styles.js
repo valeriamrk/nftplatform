@@ -1,7 +1,8 @@
 import styled from "styled-components/macro";
 
 export const Wrapper = styled.div`
-  background-color: #303339;
+  background-color: ${(props) => props.theme.backgroundColor};
+  border: ${(props) => props.theme.card.border};
   flex: 1 1 auto;
   width: 250px;
   /* width: 14rem; */
@@ -15,6 +16,10 @@ export const Wrapper = styled.div`
   border-radius: 1rem; /* 16px */
   overflow: hidden;
   cursor: pointer;
+  &:hover {
+    box-shadow: ${(props) => props.theme.card.hover};
+
+  }
 `;
 export const ContentWrapper = styled.div`
 display: flex;
@@ -71,6 +76,8 @@ export const AssetName = styled.div`
   font-weight: 700;
   font-size: 12px;
   margin-top: 0.5rem; /* 8px */
+  color: ${(props) => props.theme.fontsColor.primeFont};
+
 `;
 
 export const InfoRight = styled.div`
@@ -95,6 +102,8 @@ export const PriceValue = styled.div`
   line-height: 1.75rem; /* 28px */
   font-weight: 700;
   margin-top: 0.1rem; /* 8px */
+  color: ${(props) => props.theme.fontsColor.primeFont};
+
 `;
 
 export const EthLogo = styled.img`

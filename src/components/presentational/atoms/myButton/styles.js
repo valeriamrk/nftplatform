@@ -1,10 +1,10 @@
 import styled, { css } from "styled-components/macro";
 
 export const MyButton = styled.button`
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   border-style: none;
   position: relative;
   font-size: 1.125rem; /* 18px */
@@ -13,21 +13,24 @@ align-items: center;
   width: 160px;
   padding: 12px 20px 12px 20px;
   background-color: #2181e2;
+  /* background-color: ${(props) => props.theme.buttonColor}; */
   border-radius: 0.5rem; /* 8px */
   margin-right: 1.25rem; /* 20px */
   color: white;
   &:hover {
-    background-color: #42a0ff;
+    background-color: ${(props) => props.theme.primaryButton.hoverColor};
     cursor: pointer;
   }
   ${(props) =>
-    props.primary &&
+    props.secondary &&
     css`
-      background-color: #363840;
-      color: #e4e8ea;
-      border: 1px solid rgb(21, 27, 34);
+      background-color: ${(props) => props.theme.secondaryButton.buttonColor};
+      color: ${(props) => props.theme.secondaryButton.fontColor};
+      border: 1px solid;
+      border-color: ${(props) => props.theme.secondaryButton.borderColor};
       &:hover {
-        background-color: #4c505c;
+        background-color: ${(props) => props.theme.secondaryButton.hoverColor};
+        box-shadow: ${(props) => props.theme.secondaryButton.boxShadow};
         cursor: pointer;
       }
     `};
@@ -39,6 +42,7 @@ align-items: center;
       font-size: 16px;
       &:hover {
         background-color: #42a0ff;
+
         cursor: pointer;
       }
     `};
@@ -48,9 +52,16 @@ align-items: center;
       width: 300px;
       background-color: #363840;
       color: #e4e8ea;
-      border: 1px solid rgb(21, 27, 34);
+      background-color: ${(props) => props.theme.secondaryButton.buttonColor};
+      color: ${(props) => props.theme.secondaryButton.fontColor};
+
+      border: 1px solid;
+      border-color: ${(props) => props.theme.secondaryButton.borderColor};
+
       &:hover {
-        background-color: #4c505c;
+        background-color: ${(props) => props.theme.secondaryButton.hoverColor};
+        box-shadow: ${(props) => props.theme.secondaryButton.boxShadow};
+
         cursor: pointer;
       }
     `};
@@ -65,12 +76,12 @@ align-items: center;
       flex-direction: row;
       padding: 16px 16px;
       font-size: 16px;
-      background-color: #363840;
-      color: #e4e8ea;
+      background-color: ${(props) => props.theme.iconButton.buttonColor};
+      color: rgb(255, 255, 255);
       margin-right: 12px;
       margin-bottom: 12px;
       &:hover {
-        background-color: #4c505c;
+        background-color: ${(props) => props.theme.iconButton.hoverColor};
         cursor: pointer;
       }
     `};

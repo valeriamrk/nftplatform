@@ -25,20 +25,25 @@ export const ListItemWrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   color: white;
+  color: ${(props) => props.theme.fontsColor.primeFont};
   width: 100%;
   font-weight: 600;
-  border-bottom: 1px solid #646072;
-  border-right: 1px solid #646072;
-  border-left: 1px solid #646072;
+  border-bottom: ${(props) => props.theme.nftTable.border};
+  border-right: ${(props) => props.theme.nftTable.border};
+  border-left: ${(props) => props.theme.nftTable.border};
   padding: 16px 8px 16px 8px;
   cursor: pointer;
   &:hover {
     /* box-shadow: 1px 3px 8px 3px #646072; */
-    background-color: #363840;
+    /* background-color: #363840; */
+    background-color:${(props) => props.theme.nftTable.hoverBackgroundColor};
+    box-shadow: ${(props) => props.theme.nftTable.boxShadow};
+
+
 
   }
   &:first-child {
-    border-top: 1px solid #646072;
+    border-top: ${(props) => props.theme.nftTable.border};
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
@@ -46,7 +51,7 @@ export const ListItemWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid white;
+    border: ${(props) => props.theme.nftTable.border};
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     font-size: 18px;

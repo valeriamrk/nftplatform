@@ -23,7 +23,9 @@ export const ListHeader = styled.div`
   width: 100%;
   font-weight: 600;
   /* border-bottom: 1px solid rgb(229 228 235); */
-  border-bottom: 1px solid #646072;
+  /* border-bottom: 1px solid #646072; */
+  border-bottom: ${(props) => props.theme.nftTable.border};
+
   padding: 32px 8px 32px 8px;
   cursor: pointer;
 `;
@@ -57,6 +59,7 @@ export const ListItemWrapper = styled.div`
   width: 100%;
   font-weight: 600;
   border-bottom: 1px solid #646072;
+
   padding: 16px 8px 16px 8px;
   cursor: pointer;
   &:hover {
@@ -122,6 +125,8 @@ export const TableWrapper = styled.table`
   flex-direction: column;
   width: 80%;
   margin-top: 40px;
+  color: ${(props) => props.theme.fontsColor.primeFont};
+
 `;
 
 export const TableHeader = styled.tr`
@@ -131,11 +136,12 @@ export const TableHeader = styled.tr`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: white;
   width: 100%;
   font-weight: 600;
   /* border-bottom: 1px solid rgb(229 228 235); */
   border-bottom: 1px solid rgb(21, 27, 34);
+  border-bottom: ${(props) => props.theme.nftTable.border};
+
   padding: 32px 16px 32px 16px;
   cursor: pointer;
 `;
@@ -163,17 +169,18 @@ export const TableRow = styled.tr`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: white;
   width: 100%;
   font-weight: 600;
-  border-bottom: 1px solid rgb(21, 27, 34);
+  border-bottom: ${(props) => props.theme.nftTable.border};
   padding: 16px 16px 16px 16px;
   cursor: pointer;
   &:hover {
     /* border-right: 1px solid #646072;
     border-left: 1px solid #646072;
     box-shadow: 1px 3px 8px #646072; */
-    background-color: #363840;
+    background-color:${(props) => props.theme.nftTable.hoverBackgroundColor};
+    box-shadow: ${(props) => props.theme.nftTable.boxShadow};
+
 ;
   }
 `;
@@ -227,4 +234,5 @@ justify-content: center;
 margin-bottom: 40px;
 font-weight: 600;
 font-size: 18px;
+margin-top: 30px;
 `;

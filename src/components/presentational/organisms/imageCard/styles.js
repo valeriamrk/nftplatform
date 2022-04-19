@@ -5,8 +5,11 @@ display: flex;
 flex-direction: column;
 width: 500px;
 background: rgb(48, 51, 57);
+background-color: ${(props) => props.theme.backgroundColor};
+
 border-radius: 10px;
-border: 1px solid rgb(21, 27, 34);
+border: ${(props) => props.theme.card.border};
+
 margin-left: 20px;
 `
 export const FirstContainer = styled.div`

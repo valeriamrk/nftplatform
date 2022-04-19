@@ -13,9 +13,11 @@ export const InputField = styled.input`
   padding-left: 0.5rem; /* 8px */
   padding-right: 0.5rem; /* 8px */
   color: #e6e8eb;
+  color: ${(props) => props.theme.searchBar.placeholderText};
   ::-webkit-input-placeholder {
     font-size: 16px;
     color: #8a939b;
+
   }
   ::-moz-placeholder {
     font-size: 16px;
@@ -32,24 +34,24 @@ export const InputField = styled.input`
   ${(props) =>
     props.white &&
     css`
-      color: black;
+      color: ${(props) => props.theme.searchBar.placeholderText};
       font-size: 18px;
 
   ::-webkit-input-placeholder {
     font-size: 18px;
-    color: black;
+    color: #8a939b;
   }
   ::-moz-placeholder {
     font-size: 18px;
-    color: black;
+    color: #8a939b;
   } /* Firefox 19+ */
   :-moz-placeholder {
     font-size: 18px;
-    color: black;
+    color: #8a939b;
   } /* Firefox 18- */
   :-ms-input-placeholder {
     font-size: 18px;
-    color: black;
+    color: #8a939b;
     `};
   /* outline: none;
   font-size: 13px;

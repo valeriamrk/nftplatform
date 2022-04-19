@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { HeaderItem, SideNavBar } from "../../../presentational";
 import * as S from "./styles";
-import { MdOutlineAccountBalanceWallet } from "react-icons/md";
+import { MdOutlineAccountBalanceWallet, MdModeNight } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { Link } from "react-router-dom";
+import { MyButton, SwitchButton } from "../../../presentational";
 
 const HeaderItemGroup = (props) => {
-  const { navbarLinks, handleSidebarStatus } = props;
+  const { navbarLinks, handleSidebarStatus, themeToggler } = props;
   const [selectedIndex, setSelectedIndex] = React.useState();
   const itemClick = (index) => {
       setSelectedIndex(index);
@@ -31,6 +32,8 @@ const HeaderItemGroup = (props) => {
       <S.HeaderIcon>
         <MdOutlineAccountBalanceWallet onClick={() => handleSidebarStatus()} />
       </S.HeaderIcon>
+      <S.HeaderIcon><MdModeNight/></S.HeaderIcon>
+      <SwitchButton themeToggler={themeToggler}/>
     </S.HeaderItemGroup>
   );
 };

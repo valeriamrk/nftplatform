@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import {
   PageBasicLayout, 
   LogoGroup,
@@ -15,8 +15,8 @@ import { changeSidebarStatus, changeSidebarStatusClose } from "../../../../store
 
 
 
-
-const MainPage = () => {
+const MainPage = (props) => {
+  const {themeToggler} = props
 
   const navbarLinks = useSelector(
     (state) => state.navbarLinksData.navbarLinks
@@ -52,15 +52,6 @@ const MainPage = () => {
   };
 
 
-
-
-//   const [openNav, setOpenNav] = useState(false)
-
-// const handleOpenNav = () => {
-//   setOpenNav(!openNav)
-//   console.log("opennav")
-// }
-
 const dispatch = useDispatch();
 
 const handleSidebarStatus = () => {
@@ -77,10 +68,8 @@ const handleSidebarStatusClose = () => {
       <PageBasicLayout>
         <PageBasicLayout.PageHeader>
           <LogoGroup />
-          {/* <SearchBar placeholder="Search items, collections, and accounts"/> */}
           <GlobalSearch filterData={filteredData} searchValue={searchValue} setSearchValue={setSearchValue} handleFilter={globalFilter} clearInput={clearInput}/>
-          <HeaderItemGroup navbarLinks={navbarLinks} handleSidebarStatus={handleSidebarStatus}/>
-          {/* <HeaderItemGroup navbarLinks={navbarLinks} handleOpenNav={handleOpenNav} /> */}
+          <HeaderItemGroup navbarLinks={navbarLinks} handleSidebarStatus={handleSidebarStatus} themeToggler={themeToggler}/>
         </PageBasicLayout.PageHeader>
         <PageBasicLayout.PageContent>
           <Outlet/>
@@ -89,7 +78,6 @@ const handleSidebarStatusClose = () => {
           <Footer/>
         </PageBasicLayout.PageFooter>
       </PageBasicLayout>
-      {/* <SideNavBar openNav={openNav} /> */}
       <SideNavBar sidebarActive={sidebarData} handleSidebarStatusClose={handleSidebarStatusClose}/>
     </S.MainContainer>
   );

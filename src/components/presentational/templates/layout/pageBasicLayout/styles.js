@@ -11,7 +11,8 @@ height: 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #04111d;
+  background-color: ${(props) => props.theme.header.headerColor};
+  box-shadow: ${(props) => props.theme.header.boxShadow};
   position: sticky;
   top: 0;
   z-index: 9999;
@@ -24,7 +25,7 @@ export const Content = styled.div`
 `;
 
 export const Footer = styled.div`
-  background-color: #04111d;
+  background-color: ${(props) => props.theme.footerColor};
   display: flex;
   flex-direction: column;
   width: 100%;

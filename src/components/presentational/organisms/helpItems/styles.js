@@ -18,6 +18,8 @@ export const ItemWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   border: 1px solid #646072;
+  border: ${(props) => props.theme.faq.faqBorder};
+
   border-radius: 5px;
   box-sizing: border-box;
   display: flex;
@@ -27,7 +29,9 @@ export const ItemWrapper = styled.div`
   text-align: center;
   padding: 30px;
   &:hover {
-    box-shadow: 1px 1px 8px 1px #646072;
+    /* box-shadow: 1px 1px 8px 1px #646072; */
+    box-shadow: ${(props) => props.theme.faq.faqBoxshadow};
+
     cursor: pointer;
   }
 `;
@@ -36,6 +40,8 @@ export const Title = styled.div`
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 0.25px;
+  color: ${(props) => props.theme.fontsColor.primeFont};
+
 `;
 
 export const Description = styled.div`
@@ -43,6 +49,8 @@ export const Description = styled.div`
   font-weight: 300;
   letter-spacing: 0.25px;
   margin-top: 10px;
+  color: ${(props) => props.theme.fontsColor.thirdFont};
+
 `;
 
 export const NotFound = styled.div`
@@ -55,5 +63,6 @@ margin-bottom: 40px;
 font-weight: 600;
 font-size: 18px;
 color: white;
+
 margin-top: 40px;
 `;

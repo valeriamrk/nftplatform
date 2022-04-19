@@ -24,7 +24,7 @@ export const IconsWrapper = styled.div`
   flex-direction: row;
   font-size: 22px;
   margin-right: 40px;
-  color: rgb(229, 232, 235);
+  color: rgb(112, 122, 131);
   height: max-content;
 `;
 
@@ -33,21 +33,21 @@ export const IconContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid #646072;
-  border-top: 1px solid #646072;
-  border-left: 1px solid #646072;
+  border-bottom: 1px solid rgb(112, 122, 131);
+  border-top: 1px solid rgb(112, 122, 131);
+  border-left: 1px solid rgb(112, 122, 131);
   padding: 12px;
   cursor: pointer;
   &:hover {
-    box-shadow: 1px 1px 8px 1px #646072;
+    box-shadow: 1px 1px 8px 1px rgb(112, 122, 131);
   }
   &:first-child {
-    border-left: 1px solid #646072;
+    border-left: 1px solid rgb(112, 122, 131);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
   }
   &:last-child {
-    border-right: 1px solid #646072;
+    border-right: 1px solid rgb(112, 122, 131);
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
   }

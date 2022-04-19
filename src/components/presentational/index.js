@@ -2,6 +2,7 @@ export * from './atoms/myButton/MyButton'
 export * from './atoms/inputField/InputField'
 export * from './atoms/logo/Logo'
 export * from './atoms/headerItem/HeaderItem'
+export * from './atoms/switchButton/SwitchButton'
 
 export * from './molecules/searchBar/SearchBar'
 export * from './molecules/logoGroup/LogoGroup'

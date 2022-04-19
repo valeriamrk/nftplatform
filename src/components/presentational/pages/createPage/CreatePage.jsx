@@ -21,7 +21,7 @@ const CreatePage = () => {
       <S.TextContainer>
         You need an Ethereum wallet to use OpenOcean.
       </S.TextContainer>
-      <div>
+      <S.DescriptionContainer>
         Connect with one of our available{" "}
         <S.Tooltip>
           wallet
@@ -31,7 +31,7 @@ const CreatePage = () => {
           </S.TooltipText>
         </S.Tooltip>{" "}
         providers or create a new one.
-      </div>
+      </S.DescriptionContainer>
       <WalletList walletsData={walletsData} shortList={shortList} changeListLength={changeListLength}/>
     </S.TopContainer>
   );

@@ -6,7 +6,8 @@ export const TopContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: ${(props) => props.theme.fontsColor.primeFont};
+
 `;
 
 export const TextContainer = styled.div`
@@ -16,6 +17,8 @@ export const TextContainer = styled.div`
   font-weight: 600;
   margin-bottom: 1rem; /* 16px */
   color: white;
+  color: ${(props) => props.theme.fontsColor.primeFont};
+
 `;
 
 export const DescriptionContainer = styled.p`
@@ -23,4 +26,6 @@ export const DescriptionContainer = styled.p`
   font-weight: 400;
   margin-bottom: 1rem; /* 16px */
   color: white;
+  color: ${(props) => props.theme.fontsColor.thirdFont};
+
 `;
