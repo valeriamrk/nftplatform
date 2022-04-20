@@ -9,17 +9,28 @@ import {
 import { MainPage, Hero } from "./components/presentational";
 import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./themes.js";
+import { useDispatch, useSelector } from "react-redux";
+import { defaultThemeToggler } from "./store/allDataSlice";
 
 function App() {
-  const [theme, setTheme] = useState("light")
+  // const [theme, setTheme] = useState("light")
+
+  const defaultTheme = useSelector(
+    (state) => state.allData.defaultTheme
+  );
+
+  // const themeToggler = () => {
+  //   theme === "light" ? setTheme("dark") : setTheme("light");
+  // };
+  const dispatch = useDispatch();
   const themeToggler = () => {
-    theme === "light" ? setTheme("dark") : setTheme("light");
+    dispatch(defaultThemeToggler())
   };
 
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+    <ThemeProvider theme={defaultTheme === "light" ? lightTheme : darkTheme}>
     <GlobalStyles />
     <div className="App">
       <Routes>

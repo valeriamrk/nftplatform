@@ -19,6 +19,7 @@ const initialState = {
     { id: 3, opened: false, label: "About Crypto Coven" },
     { id: 4, opened: false, label: "Details" },
   ],
+  defaultTheme: "light",
 };
 
 export const allDataSlice = createSlice({
@@ -39,6 +40,9 @@ export const allDataSlice = createSlice({
         return element;
       });
     },
+    defaultThemeToggler: (state, action) => {
+      state.defaultTheme === "light" ? state.defaultTheme = "dark" : state.defaultTheme = "light"
+    },
   },
 });
 
@@ -47,7 +51,7 @@ export const {
   changeSidebarStatus,
   changeSidebarStatusClose,
   changeAccordionStatus,
-  changeAccordionStateClose
+  defaultThemeToggler
 } = allDataSlice.actions;
 
 export default allDataSlice.reducer;

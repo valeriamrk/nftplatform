@@ -6,12 +6,19 @@ import { CgProfile } from "react-icons/cg";
 import { Link } from "react-router-dom";
 import { MyButton, SwitchButton } from "../../../presentational";
 
+
 const HeaderItemGroup = (props) => {
   const { navbarLinks, handleSidebarStatus, themeToggler } = props;
-  const [selectedIndex, setSelectedIndex] = React.useState();
+  const [selectedIndex, setSelectedIndex] = useState();
   const itemClick = (index) => {
       setSelectedIndex(index);
   };
+  
+  // const resetSelected = () => {
+  //   setSelectedIndex("");
+  // }
+
+
 
   return (
     <S.HeaderItemGroup>
@@ -32,7 +39,7 @@ const HeaderItemGroup = (props) => {
       <S.HeaderIcon>
         <MdOutlineAccountBalanceWallet onClick={() => handleSidebarStatus()} />
       </S.HeaderIcon>
-      <S.HeaderIcon><MdModeNight/></S.HeaderIcon>
+      <S.Icon><MdModeNight/></S.Icon>
       <SwitchButton themeToggler={themeToggler}/>
     </S.HeaderItemGroup>
   );
