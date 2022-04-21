@@ -1,8 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import {
   PageBasicLayout, 
   LogoGroup,
-  SearchBar,
   HeaderItemGroup,
   Footer,
   SideNavBar,
@@ -62,17 +61,25 @@ const handleSidebarStatusClose = () => {
   dispatch(changeSidebarStatusClose())
 }
 
+const [navigationSelectedIndex, setNavigationSelectedIndex] = useState();
+const navigationClick = (index) => {
+  setNavigationSelectedIndex(index);
+};
+
+  const resetSelectedNavIndex = () => {
+    setNavigationSelectedIndex("");
+  }
 
   return (
     <S.MainContainer>
       <PageBasicLayout>
         <PageBasicLayout.PageHeader>
-          <LogoGroup />
+          <LogoGroup handleClick={resetSelectedNavIndex}/>
           <GlobalSearch filterData={filteredData} searchValue={searchValue} setSearchValue={setSearchValue} handleFilter={globalFilter} clearInput={clearInput}/>
-          <HeaderItemGroup navbarLinks={navbarLinks} handleSidebarStatus={handleSidebarStatus} themeToggler={themeToggler}/>
+          <HeaderItemGroup navbarLinks={navbarLinks} handleSidebarStatus={handleSidebarStatus} themeToggler={themeToggler} navigationClick={navigationClick} navigationSelectedIndex={navigationSelectedIndex} handleClick={resetSelectedNavIndex}/>
         </PageBasicLayout.PageHeader>
         <PageBasicLayout.PageContent>
-          <Outlet/>
+          <Outlet context={{resetSelectedNavIndex}}/>
         </PageBasicLayout.PageContent>
         <PageBasicLayout.PageFooter>
           <Footer/>

@@ -28,9 +28,7 @@ export const Slider = styled.span`
   left: 0;
   right: 0;
   bottom: 0;
-  /* background-color: #ccc; */
   background-color: ${(props) => props.theme.fontsColor.fourthFont};
-  /* fourthFont: "rgb(138, 147, 155)" */
 
   -webkit-transition: 0.4s;
   transition: 0.4s;

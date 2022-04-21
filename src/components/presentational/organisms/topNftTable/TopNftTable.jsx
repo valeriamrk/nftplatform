@@ -1,80 +1,37 @@
-import React, { useMemo } from "react";
+import React from "react";
 import * as S from "./styles";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { useState } from "react";
-import { useSortableData } from "../../../../utils/hooks/useSortableData";
 import { useEffect } from "react";
+import { sortRows, filterRows } from "./helpers";
 
 const TopNftTable = (props) => {
   const { statsData, selectedOption } = props;
   const [tableData, setTableData] = useState(statsData);
-  const [sortConfig, setSortConfig] = useState();
-
-
-  useEffect(() => {
-    filterData();
-  }, [selectedOption]);
+  const [sortConfig, setSortConfig] = useState({
+    sortKey: "volume",
+    direction: "ascending",
+  });
 
   useEffect(() => {
-    sortArray();
-  }, [sortConfig]);
+    sortedAndFilteredData();
+  }, [sortConfig, selectedOption]);
 
-  // useEffect(() => {
-  //   filteredAndSortedData();
-  // }, []);
 
-  const filterData = () => {
+  const sortedAndFilteredData = () => {
+    const testData = [...statsData];
+
     if (selectedOption.label !== "All Categories") {
-      const filteredData = statsData.filter(
-        (element) => element.category === selectedOption.label
-      );
-      console.log(filteredData);
-      setTableData(filteredData);
+      const filteredRows = filterRows(testData, selectedOption.label);
+      const sortedRows = sortRows(filteredRows, sortConfig);
+      console.log("USEEFFECT filter + sort", sortedRows);
+      setTableData(sortedRows);
     } else {
-      setTableData(statsData);
+      const sortedRows = sortRows(testData, sortConfig);
+      console.log("USEEFFECT sort", sortedRows);
+      setTableData(sortedRows);
     }
   };
-
-
-  const sortArray = () => {
-    if (sortConfig) {
-      const sortedData = [...statsData];
-      sortedData.sort(getComparator(sortConfig.sortKey, sortConfig.direction));
-      setTableData(sortedData);
-    } else {
-      setTableData(statsData);
-    }
-  };
-
-  const getComparator = (sortKey, sortDirection) => {
-    if (sortDirection === "descending") {
-      return (a, b) => descSort(a, b, sortKey);
-    } else {
-      return (a, b) => ascSort(a, b, sortKey);
-    }
-  };
-
-  const ascSort = (a, b, sortKey) => {
-    const numA = Number(a[sortKey]);
-    const numB = Number(b[sortKey]);
-    if (numB < numA) return -1;
-    if (numB > numA) return 1;
-    if (numA == numB) return 0;
-  };
-
-  const descSort = (a, b, sortKey) => {
-    const numA = Number(a[sortKey]);
-    const numB = Number(b[sortKey]);
-    if (numB < numA) return 1;
-    if (numB > numA) return -1;
-    if (numA == numB) return 0;
-  };
-
-  // const copyData = [...statsData]
-  // const filteredAndSortedData = copyData.filter((element) => element.category === 'Collectibles')
-  // .sort(getComparator("owners", "descending"));
-  // setTableData(filteredAndSortedData)
-
 
 
   const handleItemClick = (sortKey) => {
@@ -133,7 +90,6 @@ const TopNftTable = (props) => {
                 {element.volume}
               </S.BodyCell>
               <S.HoursCell {...element}>{element.hours}%</S.HoursCell>
-              {/* <S.TableItemDays {...props}>{element.days}</S.TableItemDays> */}
               {element.days === null ? (
                 <S.DaysCell>---</S.DaysCell>
               ) : (

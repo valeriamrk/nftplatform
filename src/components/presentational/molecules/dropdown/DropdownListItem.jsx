@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from './styles'
-import { BsCheck2, BsGrid, BsChevronDown } from "react-icons/bs";
+import { BsCheck2 } from "react-icons/bs";
 
 
 const DropdownListItem = (props) => {

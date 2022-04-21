@@ -24,14 +24,6 @@ const MySelect = (props) => {
   useOnClickOutside(ref, () => setIsOpen(false));
 
   return (
-    // <S.SelectWrapper>
-    //   {selectData.map(option =>
-    //     <S.OptionsWrapper key={option.id} value={option.value}>
-    //       {option.label}
-    //     </S.OptionsWrapper>
-    //     )}
-    // </S.SelectWrapper>
-
     <S.DropDownContainer ref={ref}>
       <S.DropDownHeader onClick={toggling}>
         <S.LabelContainer>

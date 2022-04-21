@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import * as S from "./styles";
 
 const MyModal = (props) => {

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as S from "./styles";
 import {
-  HelpList,
-  QuestionList,
   SearchBar,
   FaqItems,
 } from "../../../presentational";
@@ -53,11 +51,6 @@ const ResourcesPage = () => {
   return (
     <S.MainContainer>
       <S.BannerContainer>
-        {/* <S.Banner
-          src="https://marmotamaps.com/de/fx/wallpaper/download/faszinationen/Marmotamaps_Wallpaper_Berchtesgaden_Desktop_1920x1080.jpg"
-          alt="banner"
-        /> */}
-
         <S.SearchContainer>
           <SearchBar
             white

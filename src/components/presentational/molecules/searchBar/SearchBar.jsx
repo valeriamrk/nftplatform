@@ -1,7 +1,7 @@
 import React from "react";
 import { InputField } from "../../../presentational";
 import * as S from "./styles";
-import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
+import { AiOutlineSearch } from "react-icons/ai";
 import { MdClear } from "react-icons/md";
 
 const SearchBar = (props) => {

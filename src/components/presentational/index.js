@@ -18,13 +18,9 @@ export * from './molecules/dropdown/DropdownListItem'
 export * from './molecules/select/MySelect'
 export * from './molecules/likesCounter/LikesCounter'
 
-
 export * from './organisms/hero/Hero'
 export * from './organisms/nftCard/NftCard'
-export * from './organisms/topNftTable/TopList'
-export * from './organisms/topNftTable/TopListItem'
 export * from './organisms/topNftTable/TopNftTable'
-export * from './organisms/topNftTable/TopListHeader'
 export * from './organisms/walletList/WalletItem'
 export * from './organisms/walletList/WalletList'
 export * from './organisms/walletList/WalletButton'
@@ -42,9 +38,6 @@ export * from './organisms/faqItems/FaqItems'
 export * from './organisms/globalSearch/GlobalSearch'
 export * from './organisms/globalSearch/SearchResults'
 
-
-
-
 export * from './templates/box/Box.styled'
 export * from './templates/flex/Flex.styled'
 export * from './templates/layout/pageBasicLayout/PageBasicLayout'
@@ -57,3 +50,4 @@ export * from './pages/topNftPage/TopNftPage'
 export * from './pages/createPage/CreatePage'
 export * from './pages/resourcesPage/ResourcesPage'
 export * from './pages/openCard/OpenCard'
+export * from './pages/notFound/NotFound'

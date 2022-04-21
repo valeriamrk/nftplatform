@@ -7,12 +7,8 @@ import {
   MdBallot,
   MdExpandMore,
 } from "react-icons/md";
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  changeAccordionStateClose,
-  changeAccordionStatus,
-} from "../../../../store/allDataSlice";
+import { changeAccordionStatus } from "../../../../store/allDataSlice";
 
 const Accordion = () => {
   const accordionData = useSelector((state) => state.allData.accordionItems);
@@ -25,15 +21,6 @@ const Accordion = () => {
 
   return (
     <S.AccWrapper>
-      {/* {accordionData.map((element) => (<div><S.AccTitle onClick={() => accordionHandler(element.id)}>
-        <S.Icon>
-          <MdLabel />
-        </S.Icon>
-        {element.label}
-      </S.AccTitle>
-      <S.AccPanel active={accordionData.opened}>
-        <div>Lorem ipsum...</div>
-      </S.AccPanel></div>))} */}
       <S.AccTitle onClick={() => accordionHandler({ id: 1 })}>
         <S.LeftTitle>
           <S.Icon>
@@ -72,7 +59,6 @@ const Accordion = () => {
           </S.Icon>
           About Crypto Coven{" "}
         </S.LeftTitle>
-
         <S.Icon>
           <MdExpandMore />
         </S.Icon>
@@ -88,7 +74,6 @@ const Accordion = () => {
           </S.Icon>
           Details{" "}
         </S.LeftTitle>
-
         <S.Icon>
           <MdExpandMore />
         </S.Icon>

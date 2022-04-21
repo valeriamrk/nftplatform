@@ -8,14 +8,9 @@ import {
   SingleElementAccordion,
 } from "../../../presentational";
 import * as S from "./styles";
-import { FaEthereum } from "react-icons/fa";
 import {
   MdVerified,
-  MdLabel,
   MdToc,
-  MdEqualizer,
-  MdVerticalSplit,
-  MdBallot,
   MdTimeline,
   MdFavorite,
   MdLocalOffer,

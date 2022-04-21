@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./styles";
 import { BiMenuAltLeft } from "react-icons/bi";
-import { MdVerified, MdLabel, MdEqualizer, MdVerticalSplit, MdBallot } from "react-icons/md";
+import { MdVerified } from "react-icons/md";
 import { Accordion } from "../../../presentational";
 
 const CardOptions = () => {

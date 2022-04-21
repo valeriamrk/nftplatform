@@ -3,10 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   navbarLinks: [
-    { path: "/collections", label: "Collections" },
-    { path: "/stats", label: "Stats"},
-    { path: "/resources", label: "Resources"},
-    { path: "/create", label: "Create"},
+    { id: 1, path: "/collections", label: "Collections" },
+    { id: 2, path: "/stats", label: "Stats"},
+    { id: 3, path: "/resources", label: "Resources"},
+    { id: 4, path: "/create", label: "Create"},
   ],
 };
 

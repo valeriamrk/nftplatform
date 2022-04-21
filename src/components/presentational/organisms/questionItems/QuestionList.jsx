@@ -3,7 +3,7 @@ import { QuestionItem } from "../../../presentational";
 import * as S from "./styles";
 
 const QuestionList = (props) => {
-  const { helpQuestionsData, filteredQuestionsData } = props;
+  const { filteredQuestionsData } = props;
   if (!filteredQuestionsData.length) {
     return <div><S.Title>Promoted articles</S.Title><S.NotFound>No results found</S.NotFound></div>;
   }

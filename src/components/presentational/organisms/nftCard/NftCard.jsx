@@ -1,13 +1,12 @@
 import React from "react";
 import * as S from "./styles";
-import { BiHeart } from "react-icons/bi";
 import { LikesCounter } from "../../../presentational";
 import { Link } from "react-router-dom";
 
 const NftCard = (props) => {
+  const {handleClick} = props
   return (
-    <S.Wrapper>
-      
+    <S.Wrapper onClick={() => handleClick()}>
       <S.ContentWrapper>
       <Link to={`/opencard/${props.id}`}>
       <S.LinkContainer>

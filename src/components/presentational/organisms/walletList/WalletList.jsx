@@ -6,24 +6,16 @@ const WalletList = (props) => {
   const { walletsData, shortList, changeListLength } = props;
 
   return (
-    // <S.ListWrapper {...props}>
-    //   {walletsData.map((element, index) => {
-    //     if (index < 4) {
-    //       return <WalletItem name={element.name} logo={element.logo} />;
-    //     }
-    //     return null
-    //   })}
-    // </S.ListWrapper>
     <S.ListWrapper {...props}>
       {shortList
         ? walletsData.map((element, index) => {
             if (index < 4) {
-              return <WalletItem name={element.name} logo={element.logo} />;
+              return <WalletItem key={element.id} name={element.name} logo={element.logo} />;
             }
             return null;
           })
         : walletsData.map((element) => (
-            <WalletItem name={element.name} logo={element.logo} />
+            <WalletItem key={element.id} name={element.name} logo={element.logo} />
           ))}
       {shortList ? (
         <WalletButton changeListLength={changeListLength}>Show more options</WalletButton>

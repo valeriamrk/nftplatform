@@ -3,10 +3,12 @@ import { Logo } from "../../../presentational";
 import * as S from "./styles";
 import { useNavigate } from "react-router-dom";
 
-const LogoGroup = () => {
+const LogoGroup = (props) => {
+  const {handleClick} = props
   const navigate = useNavigate();
   const path = "";
   const handleItemClick = (event, path) => {
+    handleClick()
     navigate(path);
   };
 

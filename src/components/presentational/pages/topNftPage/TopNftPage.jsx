@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as S from "./styles";
-import { MySelect, TopList, TopNftTable } from "../../../presentational";
+import { MySelect, TopNftTable } from "../../../presentational";
 import { useSelector } from "react-redux";
 
 const TopNftPage = () => {

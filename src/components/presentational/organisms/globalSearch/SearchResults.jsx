@@ -1,11 +1,10 @@
 import React, { useRef } from "react";
 import * as S from "./styles";
 import { FaEthereum } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { useOnClickOutside } from "../../../../utils/hooks/useOnClickOutside";
 
 const SearchResults = (props) => {
-  const { filterData, searchValue, setSearchValue, clearInput } = props;
+  const { filterData, clearInput } = props;
   const ref = useRef();
   useOnClickOutside(ref, () => clearInput(""));
 

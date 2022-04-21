@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import * as S from "./styles";
-import { MdLabel, MdExpandMore } from "react-icons/md";
+import { MdExpandMore } from "react-icons/md";
 
 const SingleElementAccordion = (props) => {
   const { accData } = props;

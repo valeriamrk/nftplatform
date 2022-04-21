@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import * as S from "./styles";
 
 const InputField = (props) => {
-const {searchValue, setSearchValue, handleFilter} = props
+const {searchValue, handleFilter} = props
 
 
   return (
-      // <S.InputField {...props} value={searchValue} onChange={(event) => setSearchValue(event.target.value)}  />
       <S.InputField {...props} value={searchValue} onChange={handleFilter}  />
   );
 };

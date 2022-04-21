@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 const HeaderItem = (props) => {
   const navigate = useNavigate();
-  // const [selectedIndex, setSelectedIndex] = React.useState();
 
   const { path, label, index, itemClick } = props;
 

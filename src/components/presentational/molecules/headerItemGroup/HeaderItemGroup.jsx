@@ -1,46 +1,48 @@
-import React, { useState } from "react";
-import { HeaderItem, SideNavBar } from "../../../presentational";
+import React from "react";
+import { HeaderItem } from "../../../presentational";
 import * as S from "./styles";
 import { MdOutlineAccountBalanceWallet, MdModeNight } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { Link } from "react-router-dom";
-import { MyButton, SwitchButton } from "../../../presentational";
-
+import { SwitchButton } from "../../../presentational";
 
 const HeaderItemGroup = (props) => {
-  const { navbarLinks, handleSidebarStatus, themeToggler } = props;
-  const [selectedIndex, setSelectedIndex] = useState();
+  const {
+    navbarLinks,
+    handleSidebarStatus,
+    themeToggler,
+    navigationClick,
+    navigationSelectedIndex,
+    handleClick,
+  } = props;
   const itemClick = (index) => {
-      setSelectedIndex(index);
+    navigationClick(index);
   };
-  
-  // const resetSelected = () => {
-  //   setSelectedIndex("");
-  // }
-
-
 
   return (
     <S.HeaderItemGroup>
       {navbarLinks.map((element, index) => (
         <HeaderItem
+          key={element.id}
           path={element.path}
           label={element.label}
           index={index}
           itemClick={itemClick}
-          selected={selectedIndex === index}
+          selected={navigationSelectedIndex === index}
         />
       ))}
       <Link to="/create">
-        <S.HeaderIcon>
+        <S.HeaderIcon onClick={() => handleClick()}>
           <CgProfile />
         </S.HeaderIcon>
       </Link>
       <S.HeaderIcon>
         <MdOutlineAccountBalanceWallet onClick={() => handleSidebarStatus()} />
       </S.HeaderIcon>
-      <S.Icon><MdModeNight/></S.Icon>
-      <SwitchButton themeToggler={themeToggler}/>
+      <S.Icon>
+        <MdModeNight />
+      </S.Icon>
+      <SwitchButton themeToggler={themeToggler} />
     </S.HeaderItemGroup>
   );
 };

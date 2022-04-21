@@ -5,25 +5,21 @@ import {
   ResourcesPage,
   CreatePage,
   OpenCard,
+  NotFound,
 } from "./components/presentational";
 import { MainPage, Hero } from "./components/presentational";
 import { Routes, Route } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./themes.js";
 import { useDispatch, useSelector } from "react-redux";
 import { defaultThemeToggler } from "./store/allDataSlice";
 
 function App() {
-  // const [theme, setTheme] = useState("light")
 
   const defaultTheme = useSelector(
     (state) => state.allData.defaultTheme
   );
 
-  // const themeToggler = () => {
-  //   theme === "light" ? setTheme("dark") : setTheme("light");
-  // };
   const dispatch = useDispatch();
   const themeToggler = () => {
     dispatch(defaultThemeToggler())
@@ -41,6 +37,7 @@ function App() {
           <Route path="/create" element={<CreatePage/>} />
           <Route path="/resources" element={<ResourcesPage/>} />
           <Route path="/opencard/:id" element={<OpenCard/>} />
+          <Route path="*" element={<NotFound/>} />
         </Route>
       </Routes>
     </div>
