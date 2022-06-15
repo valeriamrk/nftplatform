@@ -10,12 +10,12 @@ const initialState = {
     {
       id: 2, 
       name: "Coinbase Wallet",
-      logo: "https://storage.opensea.io/static/wallets/walletlink/walletlink-alternative.png",
+      logo: "https://avatars.githubusercontent.com/u/18060234?s=280&v=4",
     },
     {
       id: 3, 
       name: "WalletConnect",
-      logo: "https://storage.opensea.io/static/wallets/walletconnect/walletconnect-alternative.png",
+      logo: "https://seeklogo.com/images/W/walletconnect-logo-EE83B50C97-seeklogo.com.png",
     },
     {
       id: 4, 
@@ -45,12 +45,12 @@ const initialState = {
     {
       id: 9, 
       name: "Authereum",
-      logo: "https://storage.opensea.io/static/wallets/authereum/authereum-alternative.png",
+      logo: "https://295431006-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-LtqfI5R9O0jZ6EUSMby%2F-M5YjzkZlYRpsKj80DNu%2F-M5Yk_4RdkYkaQ9BFMc5%2Fauthereum_shield.svg?alt=media&token=a23e3a25-06e5-4271-9ca1-bbde6b8070ee",
     },
     {
       id: 10, 
       name: "Torus",
-      logo: "https://storage.opensea.io/static/wallets/torus/torus-alternative.png",
+      logo: "https://icohigh.net/uploads/posts/2019-08/1567158237_torus_logo.png",
     },
     {
       id: 11, 

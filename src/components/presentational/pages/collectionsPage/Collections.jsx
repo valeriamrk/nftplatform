@@ -6,8 +6,7 @@ import { MdVerified } from "react-icons/md";
 import { useOutletContext } from "react-router-dom";
 
 const Collections = (props) => {
-
-  const {resetSelectedNavIndex} = useOutletContext()
+  const { resetSelectedNavIndex } = useOutletContext();
 
   const nftCards = useSelector((state) => state.nftCardsData.nftCards);
   useEffect(() => {
@@ -64,7 +63,7 @@ const Collections = (props) => {
             <S.CollectionStat>
               <S.StatValue>
                 <S.EthLogo
-                  src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"
+                  src="https://openseauserdata.com/files/6f8e2979d428180222796ff4a33ab929.svg"
                   alt="eth"
                 />
                 0.969
@@ -74,7 +73,7 @@ const Collections = (props) => {
             <S.CollectionStat>
               <S.StatValue>
                 <S.EthLogo
-                  src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"
+                  src="https://openseauserdata.com/files/6f8e2979d428180222796ff4a33ab929.svg"
                   alt="eth"
                 />
                 7.5K

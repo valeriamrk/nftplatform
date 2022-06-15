@@ -39,7 +39,7 @@ const MySelect = (props) => {
           {selectData.map((option) => (
             <S.ListItem
               onClick={onOptionClicked(option.label, option.icon)}
-              key={Math.random()}
+              key={option.index}
             >
               <S.Icon src={option.icon} alt="icon" />
               {option.label}
