@@ -2,7 +2,6 @@ import React from "react";
 import * as S from "./styles";
 
 const LinksTable = () => {
-  
   const listItems = {
     marketplace: [
       { label: "All NFTs" },

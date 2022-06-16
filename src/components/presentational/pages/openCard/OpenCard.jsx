@@ -55,6 +55,8 @@ const OpenCard = (props) => {
               <S.AutorLink
                 href="https://opensea.io/collection/cryptocoven"
                 name="crypto_coven"
+                target="_blank"
+                rel="noreferrer"
               >
                 {openedCard[0].author}
               </S.AutorLink>
@@ -66,7 +68,7 @@ const OpenCard = (props) => {
           </S.FirstRow>
           <S.Title>{openedCard[0].nft_name}</S.Title>
           <S.Owned>
-            Owned by <S.Ownername>ownername</S.Ownername>{" "}
+            Owned by <S.Ownername>Ownername</S.Ownername>{" "}
             <S.Favorites>
               {" "}
               <S.FavIcon>

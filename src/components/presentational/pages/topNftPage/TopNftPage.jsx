@@ -4,7 +4,6 @@ import { MySelect, TopNftTable } from "../../../presentational";
 import { useSelector } from "react-redux";
 
 const TopNftPage = () => {
-  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as S from "./styles";
-import {
-  SearchBar,
-  FaqItems,
-} from "../../../presentational";
+import { SearchBar, FaqItems } from "../../../presentational";
 import { useSelector } from "react-redux";
 
 const ResourcesPage = () => {
@@ -18,8 +15,7 @@ const ResourcesPage = () => {
   );
 
   const [searchValue, setSearchValue] = useState("");
-    const [filteredData, setFilteredData] = useState([]);
-
+  const [filteredData, setFilteredData] = useState([]);
 
   const filteredHelpItems = helpItemsData.filter((element) => {
     return (
@@ -31,22 +27,20 @@ const ResourcesPage = () => {
     return element.label.toLowerCase().includes(searchValue.toLowerCase());
   });
 
-
   const faqFilter = (event) => {
     const searchItem = event.target.value;
-    setSearchValue(searchItem);  
+    setSearchValue(searchItem);
     if (searchItem === "") {
-      setFilteredData([])
+      setFilteredData([]);
     } else {
-      setFilteredData(filteredHelpItems, filteredQuestionsData)
+      setFilteredData(filteredHelpItems, filteredQuestionsData);
     }
-  }
+  };
 
   const clearInput = () => {
     setFilteredData([]);
     setSearchValue("");
   };
-
 
   return (
     <S.MainContainer>

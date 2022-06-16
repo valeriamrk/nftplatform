@@ -6,14 +6,14 @@ import { useState } from "react";
 
 const CreatePage = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
   const walletsData = useSelector((state) => state.walletData.wallets);
-  const [shortList, setShortList] = useState(true)
+  const [isListShort, setIsListShort] = useState(true);
 
   const changeListLength = () => {
-    setShortList(!shortList)
-  }
+    setIsListShort(!isListShort);
+  };
 
   return (
     <S.TopContainer>
@@ -31,7 +31,11 @@ const CreatePage = () => {
         </S.Tooltip>{" "}
         providers or create a new one.
       </S.DescriptionContainer>
-      <WalletList walletsData={walletsData} shortList={shortList} changeListLength={changeListLength}/>
+      <WalletList
+        walletsData={walletsData}
+        isListShort={isListShort}
+        changeListLength={changeListLength}
+      />
     </S.TopContainer>
   );
 };

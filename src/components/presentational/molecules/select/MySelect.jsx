@@ -5,7 +5,7 @@ import * as S from "./styles";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 const MySelect = (props) => {
-  const {selectedOption, setSelectedOption} = props
+  const { selectedOption, setSelectedOption } = props;
   const selectData = useSelector(
     (state) => state.allData.selectCategoriesItems
   );

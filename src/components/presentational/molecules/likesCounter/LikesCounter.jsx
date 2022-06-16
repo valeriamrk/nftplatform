@@ -11,21 +11,21 @@ const LikesCounter = (props) => {
     if (likesCount === likes) {
       setLikesCount(likesCount + 1);
     } else {
-      setLikesCount(likesCount - 1)
+      setLikesCount(likesCount - 1);
     }
   };
 
   return (
     <div>
       {likesCount > likes ? (
-        <S.Likes onClick={() => likesCounter()} >
+        <S.Likes onClick={() => likesCounter()}>
           <S.RedLikeIcon>
             <IoMdHeart />
           </S.RedLikeIcon>
           <S.LikeValue>{likesCount}</S.LikeValue>
         </S.Likes>
       ) : (
-        <S.Likes onClick={() => likesCounter()} >
+        <S.Likes onClick={() => likesCounter()}>
           <S.LikeIcon>
             <IoMdHeart />
           </S.LikeIcon>

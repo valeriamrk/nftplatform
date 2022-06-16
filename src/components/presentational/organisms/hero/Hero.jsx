@@ -4,7 +4,6 @@ import { MyButton } from "../../../presentational";
 import * as S from "./styles";
 
 const Hero = () => {
-
   return (
     <S.HeroWrapper>
       <S.Container>

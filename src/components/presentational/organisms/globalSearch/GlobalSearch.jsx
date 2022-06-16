@@ -3,7 +3,8 @@ import * as S from "./styles";
 import { SearchBar, SearchResults } from "../../../presentational";
 
 const GlobalSearch = (props) => {
-  const { filterData, searchValue, setSearchValue, handleFilter, clearInput  } = props;
+  const { filterData, searchValue, setSearchValue, handleFilter, clearInput } =
+    props;
 
   return (
     <S.GlobalSearchContainer>
@@ -16,7 +17,11 @@ const GlobalSearch = (props) => {
           clearInput={clearInput}
         />
       </S.SearchBarContainer>
-      <SearchResults filterData={filterData} searchValue={searchValue} clearInput={clearInput} />
+      <SearchResults
+        filterData={filterData}
+        searchValue={searchValue}
+        clearInput={clearInput}
+      />
     </S.GlobalSearchContainer>
   );
 };

@@ -3,11 +3,18 @@ import { HelpListItems } from "./HelpListItems";
 import * as S from "./styles";
 
 const HelpList = (props) => {
-const { filteredHelpItems} = props
+  const { filteredHelpItems } = props;
 
-  return <S.Wrapper>
-  {filteredHelpItems.map((element) => <HelpListItems title={element.title} description={element.description}/>)}
-  </S.Wrapper>;
+  return (
+    <S.Wrapper>
+      {filteredHelpItems.map((element) => (
+        <HelpListItems
+          title={element.title}
+          description={element.description}
+        />
+      ))}
+    </S.Wrapper>
+  );
 };
 
 export { HelpList };

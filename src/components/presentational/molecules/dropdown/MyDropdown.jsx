@@ -5,21 +5,19 @@ import DropdownListItem from "./DropdownListItem";
 
 const MyDropdown = (props) => {
   const { dropdownButtonsData, children } = props;
-  const [openDropdown, setOpenDropdown] = useState(false);
+  const [isOpenDropdown, setIsOpenDropdown] = useState(false);
   const ref = useRef();
-  useOnClickOutside(ref, () => setOpenDropdown(false));
-  const handleOpenDropdown = () => {
-    setOpenDropdown(!openDropdown);
+  useOnClickOutside(ref, () => setIsOpenDropdown(false));
+  const handleIsOpenDropdown = () => {
+    setIsOpenDropdown(!isOpenDropdown);
   };
 
   return (
-    <S.Dropdown onClick={() => handleOpenDropdown()} ref={ref}>
+    <S.Dropdown onClick={() => handleIsOpenDropdown()} ref={ref}>
       {children}
-      <S.DropdownContent openDropdown={openDropdown}>
+      <S.DropdownContent isOpenDropdown={isOpenDropdown}>
         {dropdownButtonsData.map((element) => (
-          <DropdownListItem
-            element={element}
-          ></DropdownListItem>
+          <DropdownListItem element={element}></DropdownListItem>
         ))}
       </S.DropdownContent>
     </S.Dropdown>

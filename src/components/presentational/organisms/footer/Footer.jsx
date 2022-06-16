@@ -4,7 +4,7 @@ import {
   SocialIcons,
   FooterNavGroup,
   LinksTable,
-  CopywriteGroup
+  CopywriteGroup,
 } from "../../../presentational";
 import * as S from "./styles";
 
@@ -17,10 +17,10 @@ const Footer = () => {
       </S.FirstRow>
       <S.SecondRow>
         <FooterNavGroup />
-        <LinksTable/>
+        <LinksTable />
       </S.SecondRow>
       <S.ThirdRow>
-        <CopywriteGroup/>
+        <CopywriteGroup />
       </S.ThirdRow>
     </S.FooterWrapper>
   );

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const HeaderItem = (props) => {
   const navigate = useNavigate();
-
+  
   const { path, label, index, itemClick } = props;
 
   const handleItemClick = (event, index, path) => {

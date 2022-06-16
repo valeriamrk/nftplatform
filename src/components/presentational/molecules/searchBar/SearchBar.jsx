@@ -28,7 +28,7 @@ const SearchBar = (props) => {
       />
       {searchValue.length !== 0 && (
         <S.CloseIcon {...props} onClick={() => clearInput()}>
-          <MdClear/>
+          <MdClear />
         </S.CloseIcon>
       )}
     </S.SearchBar>

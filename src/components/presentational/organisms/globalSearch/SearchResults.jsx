@@ -14,14 +14,14 @@ const SearchResults = (props) => {
         filterData.map((element) => (
           <S.StyledLink to={`/opencard/${element.id}`}>
             <S.ResultItem onClick={(e) => e.stopPropagation()}>
-                <S.LeftContainer>
-                  <S.Logo src={element.img} />
-                  <S.Name>{element.nft_name}</S.Name>
-                </S.LeftContainer>
-                <S.RightContainer>
-                  <FaEthereum />
-                  <S.Price>{element.price}</S.Price>
-                </S.RightContainer>
+              <S.LeftContainer>
+                <S.Logo src={element.img} />
+                <S.Name>{element.nft_name}</S.Name>
+              </S.LeftContainer>
+              <S.RightContainer>
+                <FaEthereum />
+                <S.Price>{element.price}</S.Price>
+              </S.RightContainer>
             </S.ResultItem>{" "}
           </S.StyledLink>
         ))}

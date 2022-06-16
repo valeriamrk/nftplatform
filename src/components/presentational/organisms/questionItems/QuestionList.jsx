@@ -5,7 +5,12 @@ import * as S from "./styles";
 const QuestionList = (props) => {
   const { filteredQuestionsData } = props;
   if (!filteredQuestionsData.length) {
-    return <div><S.Title>Promoted articles</S.Title><S.NotFound>No results found</S.NotFound></div>;
+    return (
+      <div>
+        <S.Title>Promoted articles</S.Title>
+        <S.NotFound>No results found</S.NotFound>
+      </div>
+    );
   }
 
   return (

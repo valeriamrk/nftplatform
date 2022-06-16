@@ -2,10 +2,7 @@ import React from "react";
 import * as S from "./styles";
 
 const MyButton = (props) => {
-  const {
-    children,
-    clickButton,
-  } = props;
+  const { children, clickButton } = props;
 
   return (
     <S.MyButton

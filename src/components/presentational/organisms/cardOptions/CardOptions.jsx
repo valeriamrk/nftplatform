@@ -5,7 +5,6 @@ import { MdVerified } from "react-icons/md";
 import { Accordion } from "../../../presentational";
 
 const CardOptions = () => {
-  
   return (
     <S.OptionsWrapper>
       <S.Title>
@@ -23,8 +22,9 @@ const CardOptions = () => {
           >
             crypto_coven
           </S.AutorLink>
-          <S.Verified><MdVerified /></S.Verified>
-          
+          <S.Verified>
+            <MdVerified />
+          </S.Verified>
         </S.CreatedBy>
         <S.Text>
           You are a WITCH woven from the strings of a windchime. You dye your
@@ -33,7 +33,7 @@ const CardOptions = () => {
           WHAT MORTALS CANNOT IMAGINE!
         </S.Text>
       </S.TextContainer>
-      <Accordion/>
+      <Accordion />
     </S.OptionsWrapper>
   );
 };

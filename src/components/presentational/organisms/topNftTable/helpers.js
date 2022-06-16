@@ -1,9 +1,8 @@
 const filterRows = (rows, filter) => {
-  return rows.filter((element) => element.category === filter)
-}
+  return rows.filter((element) => element.category === filter);
+};
 
 const sortRows = (rows, sort) => {
-
   const getComparator = (sortKey, sortDirection) => {
     if (sortDirection === "descending") {
       return (a, b) => descSort(a, b, sortKey);
@@ -28,8 +27,7 @@ const sortRows = (rows, sort) => {
     if (numA == numB) return 0;
   };
 
-  return rows.sort(getComparator(sort.sortKey, sort.direction))
+  return rows.sort(getComparator(sort.sortKey, sort.direction));
+};
 
-}
-
-export {sortRows, filterRows}
+export { sortRows, filterRows };

@@ -4,7 +4,7 @@ import * as S from "./styles";
 import { FaEthereum } from "react-icons/fa";
 
 const ImageCard = (props) => {
-  const {image, likes} = props
+  const { image, likes } = props;
 
   return (
     <S.CardContainer>
@@ -12,10 +12,7 @@ const ImageCard = (props) => {
         <FaEthereum />
         <LikesCounter likes={likes} />
       </S.FirstContainer>
-      <S.MainImage
-        src={image}
-        alt=""
-      />
+      <S.MainImage src={image} alt="" />
     </S.CardContainer>
   );
 };

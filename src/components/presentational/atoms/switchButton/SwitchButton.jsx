@@ -3,17 +3,13 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 
 const SwitchButton = (props) => {
-  const { themeToggler } = props;  
-  
-  const defaultTheme = useSelector(
-    (state) => state.allData.defaultTheme
-  );
+  const { themeToggler } = props;
 
-const themeValue = () => defaultTheme === "light" ? false : true
+  const defaultTheme = useSelector((state) => state.allData.defaultTheme);
 
+  const themeValue = () => (defaultTheme === "light" ? false : true);
 
   const [value, setCheckbox] = useState(themeValue);
-
 
   const switchHandler = () => {
     themeToggler();
