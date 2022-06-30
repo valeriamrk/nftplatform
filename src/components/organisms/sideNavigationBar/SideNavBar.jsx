@@ -6,14 +6,13 @@ import { useSelector } from "react-redux";
 import { useOnClickOutside } from "../../../utils/hooks/useOnClickOutside";
 
 const SideNavBar = (props) => {
-  const walletsData = useSelector((state) => state.walletData.wallets);
-
   const { openNav, sidebarActive, handleSidebarStatusClose } = props;
+
+  const walletsData = useSelector((state) => state.walletData.wallets);
+  const [isListShort, setIsListShort] = useState(true);
 
   const ref = useRef();
   useOnClickOutside(ref, () => handleSidebarStatusClose());
-
-  const [isListShort, setIsListShort] = useState(true);
 
   const changeListLength = () => {
     setIsListShort(!isListShort);

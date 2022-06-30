@@ -5,11 +5,13 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 
 const CreatePage = () => {
+  const walletsData = useSelector((state) => state.walletData.wallets);
+
+  const [isListShort, setIsListShort] = useState(true);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const walletsData = useSelector((state) => state.walletData.wallets);
-  const [isListShort, setIsListShort] = useState(true);
 
   const changeListLength = () => {
     setIsListShort(!isListShort);

@@ -9,6 +9,7 @@ const Collections = (props) => {
   const { resetSelectedNavIndex } = useOutletContext();
 
   const nftCards = useSelector((state) => state.nftCardsData.nftCards);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
