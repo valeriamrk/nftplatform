@@ -1,6 +1,6 @@
 # NFT PLATFORM
 
-![NFT PLATFORM main page](/assets/images/nftplatform.png "NFT PLATFORM main page")
+![NFT PLATFORM main page](/src/assets/images/nftplatform.png "NFT PLATFORM main page")
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 This is realization (only Frontend part) of NFT marketplace.
