@@ -56,7 +56,7 @@ export const CloseIcon = styled.div`
   ${(props) =>
     props.white &&
     css`
-      font-size: 24px; /* 18px */
+      font-size: 24px;
       color: black;
     `};
 `;

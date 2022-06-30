@@ -53,8 +53,4 @@ export const InputField = styled.input`
     font-size: 18px;
     color: #8a939b;
     `};
-  /* outline: none;
-  font-size: 13px;
-  padding-left: 10px;
-  font-family: 'Montserrat', sans-serif; */
 `;

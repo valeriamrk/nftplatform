@@ -53,7 +53,6 @@ export const ListItem = styled.li`
 export const Column = styled.ul`
   line-height: 1.5;
   list-style: none;
-  /* margin-right: 40px; */
   min-width: 190px;
   padding: 0;
   margin-right: 16px;

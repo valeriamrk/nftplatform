@@ -34,13 +34,8 @@ export const ListItemWrapper = styled.div`
   padding: 16px 8px 16px 8px;
   cursor: pointer;
   &:hover {
-    /* box-shadow: 1px 3px 8px 3px #646072; */
-    /* background-color: #363840; */
-    background-color:${(props) => props.theme.nftTable.hoverBackgroundColor};
+    background-color: ${(props) => props.theme.nftTable.hoverBackgroundColor};
     box-shadow: ${(props) => props.theme.nftTable.boxShadow};
-
-
-
   }
   &:first-child {
     border-top: ${(props) => props.theme.nftTable.border};

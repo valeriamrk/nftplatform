@@ -5,10 +5,7 @@ export const Wrapper = styled.div`
   border: ${(props) => props.theme.card.border};
   flex: 1 1 auto;
   width: 250px;
-  /* width: 14rem; */
   height: 100%;
-  /* height: 22rem; */
-  /* height: min-content; */
   margin-top: 2.5rem; /* 40px */
   margin-bottom: 2.5rem; /* 40px */
   margin-left: 1.25rem; /* 20px */
@@ -18,20 +15,16 @@ export const Wrapper = styled.div`
   cursor: pointer;
   &:hover {
     box-shadow: ${(props) => props.theme.card.hover};
-
   }
 `;
 export const ContentWrapper = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-/* height: 80%; */
-height: min-content;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: min-content;
 `;
 
 export const ImgContainer = styled.div`
-  /* height: 66%; */
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -52,7 +45,6 @@ export const Details = styled.div`
 
 export const Info = styled.div`
   display: flex;
-  /* flex-direction: column; */
   justify-content: space-between;
   color: #e4e8eb;
   filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
@@ -62,7 +54,6 @@ export const Info = styled.div`
 export const InfoLeft = styled.div`
   flex-wrap: wrap;
   flex: 1 1 auto;
-  /* infoLeft: flex-0.6 flex-wrap, */
 `;
 
 export const CollectionName = styled.div`
@@ -77,14 +68,11 @@ export const AssetName = styled.div`
   font-size: 12px;
   margin-top: 0.5rem; /* 8px */
   color: ${(props) => props.theme.fontsColor.primeFont};
-
 `;
 
 export const InfoRight = styled.div`
   text-align: right;
   flex: 1 1 auto;
-
-  /* flex-0.4  */
 `;
 
 export const PriceTag = styled.div`
@@ -103,7 +91,6 @@ export const PriceValue = styled.div`
   font-weight: 700;
   margin-top: 0.1rem; /* 8px */
   color: ${(props) => props.theme.fontsColor.primeFont};
-
 `;
 
 export const EthLogo = styled.img`
@@ -112,15 +99,13 @@ export const EthLogo = styled.img`
 `;
 
 export const LinkContainer = styled.div`
-display: flex;
-flex-direction: column;
-/* justify-content: space-between; */
-height: min-content;
+  display: flex;
+  flex-direction: column;
+  height: min-content;
 `;
 
-
 export const LikesContainer = styled.div`
-display: flex;
-justify-content: flex-end;
-align-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 `;

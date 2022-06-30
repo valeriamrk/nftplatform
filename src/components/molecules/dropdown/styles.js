@@ -39,9 +39,7 @@ export const Dropdown = styled.div`
 
   &:hover {
     ${MyButton} {
-      /* background-color: #2B7A78; */
       background-color: #d1e8e2;
-      /* color: #FEFFFF; */
     }
   }
 `;

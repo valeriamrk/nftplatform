@@ -17,27 +17,23 @@ export const TextContainer = styled.div`
   margin-bottom: 1rem; /* 16px */
   color: white;
   color: ${(props) => props.theme.fontsColor.primeFont};
-
 `;
 
 export const DescriptionContainer = styled.div`
   font-size: 16px;
   line-height: 1;
   font-weight: 400;
-  /* color: white; */
   color: ${(props) => props.theme.fontsColor.thirdFont};
-
 `;
 
 // Tooltip
-
 
 export const TooltipText = styled.span`
   visibility: hidden;
   width: 350px;
   line-height: 1.5;
   font-weight: 400;
-  background-color: rgb(112, 122, 131);;
+  background-color: rgb(112, 122, 131);
   color: white;
   text-align: center;
   border-radius: 6px;
@@ -61,11 +57,9 @@ export const Tooltip = styled.div`
     cursor: pointer;
     color: rgb(24, 104, 183);
 
-    ${TooltipText}{
+    ${TooltipText} {
       visibility: visible;
-    opacity: 1;
-    
+      opacity: 1;
     }
   }
 `;
-

@@ -13,7 +13,6 @@ export const MyButton = styled.button`
   width: 160px;
   padding: 12px 20px 12px 20px;
   background-color: #2181e2;
-  /* background-color: ${(props) => props.theme.buttonColor}; */
   border-radius: 0.5rem; /* 8px */
   margin-right: 1.25rem; /* 20px */
   color: white;

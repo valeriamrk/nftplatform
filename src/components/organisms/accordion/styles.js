@@ -15,9 +15,7 @@ export const Title = styled.div`
   justify-content: flex-start;
   align-items: center;
 `;
-export const AccWrapper = styled.div`
-
-`;
+export const AccWrapper = styled.div``;
 
 export const Icon = styled.div`
   font-size: 20px;
@@ -34,7 +32,6 @@ export const AccTitle = styled.div`
 
   font-size: 16px;
   font-weight: 600;
-  /* background-color: rgb(38, 43, 47); */
   background-color: ${(props) => props.theme.accordion.titleBackgroundColor};
 
   border: ${(props) => props.theme.card.border};
@@ -45,20 +42,14 @@ export const AccTitle = styled.div`
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  /* &:last-child {
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-
-  }; */
 `;
 
 export const LeftTitle = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-justify-content: flex-start;
-`
-
+  justify-content: flex-start;
+`;
 
 export const AccPanel = styled.div`
   padding: 20px;
@@ -73,19 +64,17 @@ export const AccPanel = styled.div`
       transition: max-height 0.2s ease-out;
       display: flex;
     `};
-    &:last-child {
+  &:last-child {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-  };
-
+  }
 `;
-
 
 // 2. Single element accordeon
 
 export const SingleAccWrapper = styled.div`
-border-radius: 10px;
-margin-top: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
 `;
 
 export const SingleAccTitle = styled.div`
@@ -102,15 +91,14 @@ export const SingleAccTitle = styled.div`
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  /* border-radius: 10px; */
   &:first-child {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-  };
+  }
   &:last-child {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-  };
+  }
 `;
 
 export const SingleAccPanel = styled.div`
@@ -124,10 +112,10 @@ export const SingleAccPanel = styled.div`
   &:last-child {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-  };
+  }
   ${(props) =>
     props.active &&
     css`
       display: flex;
-    `};
-;`
+    `}; ;
+`;

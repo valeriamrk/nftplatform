@@ -2,11 +2,11 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import allDataSlice from "./allDataSlice";
 import helpCenterSlice from "./helpCenterSlice";
 import navbarLinksSlice from "./navbarLinksSlice";
-import nftCardsSlice  from "./nftCardsSlice";
+import nftCardsSlice from "./nftCardsSlice";
 import statsSlice from "./statsSlice";
 import walletSlice from "./walletSlice";
 
-import { 
+import {
   persistStore,
   persistReducer,
   FLUSH,
@@ -15,8 +15,8 @@ import {
   PERSIST,
   PURGE,
   REGISTER,
-} from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+} from "redux-persist";
+import storage from "redux-persist/lib/storage";
 
 const rootReducer = combineReducers({
   allData: allDataSlice,
@@ -24,28 +24,20 @@ const rootReducer = combineReducers({
   navbarLinksData: navbarLinksSlice,
   statsData: statsSlice,
   walletData: walletSlice,
-  helpCenterData:helpCenterSlice,
+  helpCenterData: helpCenterSlice,
 });
 
 const persistConfig = {
-  key: 'root',
+  key: "root",
   storage,
-  whitelist: ['allData']
-}
+  whitelist: ["allData"],
+};
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({
-  reducer: 
-    // nftCardsData: nftCardsSlice,
-    // navbarLinksData: navbarLinksSlice,
-    // statsData: statsSlice,
-    // walletData: walletSlice,
-    // helpCenterData:helpCenterSlice,
-    // allData: allDataSlice,
-    persistedReducer
-  ,
-    middleware: (getDefaultMiddleware) =>
+  reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
@@ -53,5 +45,5 @@ const store = configureStore({
     }),
 });
 
-export const persistor = persistStore(store)
+export const persistor = persistStore(store);
 export default store;

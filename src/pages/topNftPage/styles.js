@@ -7,7 +7,6 @@ export const TopContainer = styled.div`
   justify-content: center;
   align-items: center;
   color: ${(props) => props.theme.fontsColor.primeFont};
-
 `;
 
 export const TextContainer = styled.div`
@@ -18,7 +17,6 @@ export const TextContainer = styled.div`
   margin-bottom: 1rem; /* 16px */
   color: white;
   color: ${(props) => props.theme.fontsColor.primeFont};
-
 `;
 
 export const DescriptionContainer = styled.p`
@@ -27,5 +25,4 @@ export const DescriptionContainer = styled.p`
   margin-bottom: 1rem; /* 16px */
   color: white;
   color: ${(props) => props.theme.fontsColor.thirdFont};
-
 `;

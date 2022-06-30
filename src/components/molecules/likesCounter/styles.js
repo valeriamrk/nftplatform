@@ -13,24 +13,22 @@ export const Likes = styled.div`
 `;
 
 export const LikeIcon = styled.div`
-display: flex;
+  display: flex;
   font-size: 20px;
   line-height: 1.75rem; /* 28px */
   margin-right: 0.25rem; /* 8px */
-
 `;
 
 export const RedLikeIcon = styled.div`
-display: flex;
+  display: flex;
   font-size: 20px;
   color: rgb(235, 87, 87);
   line-height: 1.75rem; /* 28px */
   margin-right: 0.25rem; /* 8px */
-
 `;
 
 export const LikeValue = styled.div`
-  font-size: 14px; 
+  font-size: 14px;
   line-height: 1.75rem; /* 28px */
   margin-right: 0.75rem; /* 8px */
   display: flex;

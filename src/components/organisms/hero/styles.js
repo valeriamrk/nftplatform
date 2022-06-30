@@ -1,7 +1,6 @@
 import styled from "styled-components/macro";
 import { Link } from "react-router-dom";
 
-
 export const HeroWrapper = styled.div`
   position: relative;
   overflow: hidden;
@@ -38,13 +37,11 @@ export const TextContainer = styled.div`
 export const Title = styled.div`
   position: relative;
   color: ${(props) => props.theme.fontsColor.primeFont};
-  /* color: white; */
   font-size: 46px;
   font-weight: 600;
 `;
 
 export const Description = styled.div`
-  /* color: #8a939b; */
   color: ${(props) => props.theme.fontsColor.secFont};
 
   max-width: 400px;
@@ -62,19 +59,16 @@ export const StyledLink = styled(Link)`
   box-shadow: ${(props) => props.theme.boxShadow};
   border-bottom-right-radius: 0.5rem; /* 8px */
   border-bottom-left-radius: 0.5rem; /* 8px */
-
 `;
 
 export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 3rem;
-
 `;
 
 export const InfoContainer = styled.div`
   height: 5rem; /* 80px */
-  /* background-color: #313338; */
   background-color: ${(props) => props.theme.backgroundColor};
   padding: 1rem; /* 16px */
   border-bottom-right-radius: 0.5rem; /* 8px */
@@ -85,7 +79,7 @@ export const InfoContainer = styled.div`
 `;
 
 export const MainImage = styled.img`
-height: 480px;
+  height: 480px;
   border-top-right-radius: 0.5rem; /* 8px */
   border-top-left-radius: 0.5rem; /* 8px */
 `;
@@ -106,17 +100,15 @@ export const Name = styled.div`
   font-weight: 600;
   font-size: 14px;
   color: ${(props) => props.theme.fontsColor.primeFont};
-
 `;
 
 export const LinkSt = styled.div`
-  color:  rgb(32, 129, 226);
+  color: rgb(32, 129, 226);
   font-weight: 700;
   font-size: 14px;
   cursor: pointer;
   z-index: 2;
   &:hover {
-    
     color: #1868b7;
   }
 `;

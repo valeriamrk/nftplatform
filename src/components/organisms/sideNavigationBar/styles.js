@@ -10,33 +10,28 @@ export const SideNav = styled.div`
   overflow-x: hidden;
   color: white;
   color: ${(props) => props.theme.fontsColor.primeFont};
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
   background-color: rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
-  /* visibility: visible; */
   transform: translate3d(0px, 0px, 0px);
   ${(props) =>
     props.sidebarActive &&
     css`
       width: 100%;
     `};
-  /* transition: all 0.5s; */
 `;
 
 export const Content = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  background-color:${(props) => props.theme.sidebar.backgroundColor};
-
+  background-color: ${(props) => props.theme.sidebar.backgroundColor};
   width: 420px;
   height: 100%;
   overflow-x: hidden;
-
 `;
 
 export const NavHeader = styled.div`
@@ -46,7 +41,6 @@ export const NavHeader = styled.div`
   display: flex;
   align-items: center;
   border-bottom: ${(props) => props.theme.card.border};
-
 `;
 
 export const Icon = styled.div`
@@ -56,8 +50,6 @@ export const Icon = styled.div`
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 900;
-  /* padding-left: 1rem;
-padding-right: 1rem; */
   margin-right: 8px;
 `;
 
