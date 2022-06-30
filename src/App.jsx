@@ -6,8 +6,8 @@ import {
   CreatePage,
   OpenCard,
   NotFound,
-} from "./components/presentational";
-import { MainPage, Hero } from "./components/presentational";
+} from "./components";
+import { MainPage, Hero } from "./components";
 import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./themes.js";
