@@ -16,7 +16,6 @@ const Accordion = () => {
 
   const accordionHandler = (id) => {
     dispatch(changeAccordionStatus(id));
-    console.log("click");
   };
 
   return (

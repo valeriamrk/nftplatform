@@ -52,11 +52,9 @@ export const Tooltip = styled.div`
   display: inline-block;
   font-weight: 700;
   color: #2181e2;
-
   &:hover {
     cursor: pointer;
     color: rgb(24, 104, 183);
-
     ${TooltipText} {
       visibility: visible;
       opacity: 1;

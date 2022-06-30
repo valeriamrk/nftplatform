@@ -17,15 +17,15 @@ import {
 
 const MainPage = (props) => {
   const { themeToggler } = props;
+  const dispatch = useDispatch();
 
   const navbarLinks = useSelector((state) => state.navbarLinksData.navbarLinks);
-
   const sidebarData = useSelector((state) => state.allData.sidebarIsOpened);
-
   const nftCards = useSelector((state) => state.nftCardsData.nftCards);
 
   const [filteredData, setFilteredData] = useState([]);
   const [searchValue, setSearchValue] = useState("");
+  const [navigationSelectedIndex, setNavigationSelectedIndex] = useState();
 
   const globalFilter = (event) => {
     const searchCard = event.target.value;
@@ -45,8 +45,6 @@ const MainPage = (props) => {
     setSearchValue("");
   };
 
-  const dispatch = useDispatch();
-
   const handleSidebarStatus = () => {
     dispatch(changeSidebarStatus());
   };
@@ -55,7 +53,6 @@ const MainPage = (props) => {
     dispatch(changeSidebarStatusClose());
   };
 
-  const [navigationSelectedIndex, setNavigationSelectedIndex] = useState();
   const navigationClick = (index) => {
     setNavigationSelectedIndex(index);
   };

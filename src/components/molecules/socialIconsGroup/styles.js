@@ -7,11 +7,13 @@ export const Wrapper = styled.div`
   margin-top: 40px;
   margin-left: 64px;
 `;
+
 export const Header = styled.div`
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 20px;
 `;
+
 export const IconsGroup = styled.div`
   display: flex;
   flex-direction: row;

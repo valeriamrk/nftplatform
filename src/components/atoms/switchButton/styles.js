@@ -29,11 +29,9 @@ export const Slider = styled.span`
   right: 0;
   bottom: 0;
   background-color: ${(props) => props.theme.fontsColor.fourthFont};
-
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 3.4em;
-
   &::before {
     position: absolute;
     content: "";
@@ -66,4 +64,3 @@ export const Slider = styled.span`
     background: #e6e6e6;
   }
 `;
-

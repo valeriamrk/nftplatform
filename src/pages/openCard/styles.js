@@ -15,12 +15,14 @@ export const OpenCardWrapper = styled.div`
   width: 90%;
   justify-content: center;
 `;
+
 export const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 20px 10px;
 `;
+
 export const RightContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -33,11 +35,13 @@ export const AutorLink = styled.a`
   font-size: 16px;
   margin-right: 8px;
 `;
+
 export const Verified = styled.div`
   color: #2081e2;
   font-size: 16px;
   margin-right: 8px;
 `;
+
 export const VerifiedContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -51,6 +55,7 @@ export const FirstRow = styled.div`
   align-items: center;
   width: 100%;
 `;
+
 export const Title = styled.div`
   font-size: 30px;
   font-weight: 600;
@@ -65,11 +70,13 @@ export const Owned = styled.div`
   justify-content: flex-start;
   margin-top: 30px;
 `;
+
 export const Ownername = styled.div`
   font-size: 15px;
   color: #2081e2;
   margin-left: 4px;
 `;
+
 export const Favorites = styled.div`
   font-size: 15px;
   color: rgb(138, 147, 155);
@@ -77,6 +84,7 @@ export const Favorites = styled.div`
   justify-content: center;
   margin-left: 20px;
 `;
+
 export const FavIcon = styled.div`
   font-size: 24px;
   color: rgb(138, 147, 155);

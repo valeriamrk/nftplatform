@@ -9,7 +9,6 @@ export const SelectWrapper = styled.select`
   font-size: 14.5px;
   font-weight: 600;
   color: white;
-
   border: 1px solid rgb(21, 27, 34);
   border-radius: 10px;
   &:hover {
@@ -25,20 +24,16 @@ export const OptionsWrapper = styled.option`
   background-color: red;
   font-size: 20px;
 `;
+
 export const Label = styled.label`
   position: absolute;
   top: 40px;
   left: 3px;
   background-color: red;
   font-size: 20px;
-
 `;
 
-
-
-
-export const DropDownContainer = styled.div`
-`;
+export const DropDownContainer = styled.div``;
 
 export const DropDownHeader = styled.div`
   position: relative;
@@ -49,18 +44,18 @@ export const DropDownHeader = styled.div`
   padding: 16px;
   font-family: "Poppins", sans-serif;
   background-color: #202225;
-  background-color:${(props) => props.theme.mySelect.headerBackgroundColor};
+  background-color: ${(props) => props.theme.mySelect.headerBackgroundColor};
   font-size: 14.5px;
   font-weight: 600;
   color: white;
   color: ${(props) => props.theme.fontsColor.primeFont};
   border: 1px solid rgb(21, 27, 34);
-  border:${(props) => props.theme.mySelect.border};
-
+  border: ${(props) => props.theme.mySelect.border};
   border-radius: 10px;
   &:hover {
     background-color: #363840;
-    background-color:${(props) => props.theme.mySelect.headerHoverBackgroundColor};
+    background-color: ${(props) =>
+      props.theme.mySelect.headerHoverBackgroundColor};
     cursor: pointer;
   }
 `;
@@ -74,7 +69,8 @@ export const DropDownListContainer = styled.div`
   overflow: auto;
   overflow-x: hidden;
   background-color: #4c505c;
-  background-color:${(props) => props.theme.mySelect.drDownListBackgroundColor};
+  background-color: ${(props) =>
+    props.theme.mySelect.drDownListBackgroundColor};
 
   font-size: 14.5px;
   font-weight: 600;
@@ -84,9 +80,9 @@ export const DropDownListContainer = styled.div`
 `;
 
 export const ListItem = styled.div`
-display: flex;
-align-items: center;
-justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   list-style: none;
   padding: 16px;
   font-size: 14.5px;
@@ -95,24 +91,24 @@ justify-content: flex-start;
   font-weight: 600;
   &:hover {
     background-color: #363840;
-    background-color:${(props) => props.theme.mySelect.drDownListHoverBackgroundColor};
+    background-color: ${(props) =>
+      props.theme.mySelect.drDownListHoverBackgroundColor};
 
     cursor: pointer;
   }
 `;
 
 export const Icon = styled.img`
-height: 24px; 
-margin-right: 16px;
+  height: 24px;
+  margin-right: 16px;
 `;
 export const ArrowIcon = styled.div`
-font-size: 24px;
-display: flex;
-align-items: center;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
 `;
 
 export const LabelContainer = styled.div`
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 `;
-

@@ -6,7 +6,7 @@ export const Layout = styled.div`
 `;
 
 export const Header = styled.div`
-height: 72px;
+  height: 72px;
   padding: 0px 30px;
   display: flex;
   justify-content: space-between;
@@ -31,5 +31,4 @@ export const Footer = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
-
 `;

@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   margin-top: 60px;
   flex-wrap: wrap;
   justify-content: flex-start;
-`
+`;
 
 export const ListWrapper = styled.div`
   display: flex;
@@ -49,7 +49,6 @@ export const Title = styled.div`
   margin-left: 16px;
   color: white;
   color: ${(props) => props.theme.fontsColor.primeFont};
-
 `;
 
 export const Label = styled.div`
@@ -63,7 +62,6 @@ export const Label = styled.div`
   text-align: left;
   padding: 16px 0px 16px 0px;
   color: ${(props) => props.theme.fontsColor.primeFont};
-
   &:hover {
     cursor: pointer;
     font-weight: 500;
@@ -75,15 +73,15 @@ export const Label = styled.div`
 `;
 
 export const NotFound = styled.div`
-width: 100%;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-margin-bottom: 40px;
-font-weight: 600;
-font-size: 18px;
-color: white;
-margin-top: 40px;
-color: #8a939b;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  margin-top: 40px;
+  color: #8a939b;
 `;

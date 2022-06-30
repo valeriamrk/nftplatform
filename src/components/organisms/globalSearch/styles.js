@@ -57,6 +57,7 @@ export const Name = styled.div`
   font-weight: 600;
   font-size: 14px;
 `;
+
 export const Price = styled.div`
   margin-left: 8px;
 `;
@@ -69,6 +70,7 @@ export const RightContainer = styled.div`
   font-size: 14px;
   color: #8a939b;
 `;
+
 export const LeftContainer = styled.div`
   display: flex;
   align-items: center;
@@ -76,6 +78,7 @@ export const LeftContainer = styled.div`
   font-weight: 600;
   font-size: 14px;
 `;
+
 export const StyledLink = styled(Link)`
   display: flex;
   justify-content: space-between;

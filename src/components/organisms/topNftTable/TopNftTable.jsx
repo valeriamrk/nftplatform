@@ -23,11 +23,9 @@ const TopNftTable = (props) => {
     if (selectedOption.label !== "All Categories") {
       const filteredRows = filterRows(testData, selectedOption.label);
       const sortedRows = sortRows(filteredRows, sortConfig);
-      console.log("USEEFFECT filter + sort", sortedRows);
       setTableData(sortedRows);
     } else {
       const sortedRows = sortRows(testData, sortConfig);
-      console.log("USEEFFECT sort", sortedRows);
       setTableData(sortedRows);
     }
   };

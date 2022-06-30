@@ -33,9 +33,7 @@ export const AccTitle = styled.div`
   font-size: 16px;
   font-weight: 600;
   background-color: ${(props) => props.theme.accordion.titleBackgroundColor};
-
   border: ${(props) => props.theme.card.border};
-
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -56,7 +54,6 @@ export const AccPanel = styled.div`
   color: ${(props) => props.theme.fontsColor.secFont};
   background-color: ${(props) => props.theme.accordion.panelBackgroundColor};
   border: ${(props) => props.theme.card.border};
-
   display: none;
   ${(props) =>
     props.active &&
@@ -80,7 +77,6 @@ export const SingleAccWrapper = styled.div`
 export const SingleAccTitle = styled.div`
   width: 100%;
   color: ${(props) => props.theme.fontsColor.primeFont};
-
   font-size: 16px;
   font-weight: 600;
   background-color: ${(props) => props.theme.accordion.titleBackgroundColor};

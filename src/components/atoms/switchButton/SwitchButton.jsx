@@ -14,7 +14,6 @@ const SwitchButton = (props) => {
   const switchHandler = () => {
     themeToggler();
     setCheckbox(!value);
-    console.log("first");
   };
 
   return (

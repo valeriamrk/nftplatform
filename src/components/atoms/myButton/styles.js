@@ -41,7 +41,6 @@ export const MyButton = styled.button`
       font-size: 16px;
       &:hover {
         background-color: #42a0ff;
-
         cursor: pointer;
       }
     `};

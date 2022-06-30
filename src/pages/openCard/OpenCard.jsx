@@ -38,7 +38,6 @@ const OpenCard = (props) => {
     { id: 3, title: "Offers", label: "Some offers", icon: <MdToc /> },
   ];
   const { id } = useParams();
-  console.log(id);
 
   const openedCard = nftCards.filter((element) => element.id == id);
 

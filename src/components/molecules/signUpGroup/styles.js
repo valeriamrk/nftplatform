@@ -7,15 +7,16 @@ export const Wrapper = styled.div`
   margin-top: 40px;
   margin-right: 64px;
 `;
+
 export const Header = styled.div`
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 20px;
 `;
-export const Description = styled.div`
-line-height: 1.5;
-`;
 
+export const Description = styled.div`
+  line-height: 1.5;
+`;
 
 export const SignUpWrapper = styled.div`
   display: flex;
@@ -33,6 +34,5 @@ export const EmailInput = styled.div`
   border-radius: 0.8rem;
   &:hover {
     background-color: ${(props) => props.theme.searchBar.hoverColor};
-
   }
 `;

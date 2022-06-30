@@ -162,17 +162,15 @@ const initialState = {
       price: "1,8",
       likes: 8,
     },
-  ]
-}
+  ],
+};
 
 export const nftCardsSlice = createSlice({
   name: "nftCardsData",
   initialState,
-  reducers: {
-  }
-})
+  reducers: {},
+});
 
-export const { } = nftCardsSlice.actions;
+export const {} = nftCardsSlice.actions;
 
-
-export default nftCardsSlice.reducer
+export default nftCardsSlice.reducer;

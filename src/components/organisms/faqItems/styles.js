@@ -1,10 +1,10 @@
 import styled from "styled-components/macro";
 
 export const MainContainer = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const BannerContainer = styled.div`
@@ -21,27 +21,27 @@ export const BannerContainer = styled.div`
 
 export const SearchContainer = styled.div`
   height: 60px;
-`
+`;
 
 export const HelpListContainer = styled.div`
-display: flex;
-justify-content: center;
-width: 85%;
-`
+  display: flex;
+  justify-content: center;
+  width: 85%;
+`;
 export const QuestionsListContainer = styled.div`
-display: flex;
-justify-content: center;
-width: 85%;
-`
+  display: flex;
+  justify-content: center;
+  width: 85%;
+`;
 export const NotFound = styled.div`
-width: 100%;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-margin-bottom: 40px;
-font-weight: 600;
-font-size: 18px;
-color: #8a939b;
-margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #8a939b;
+  margin-top: 40px;
 `;

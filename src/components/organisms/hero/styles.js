@@ -43,7 +43,6 @@ export const Title = styled.div`
 
 export const Description = styled.div`
   color: ${(props) => props.theme.fontsColor.secFont};
-
   max-width: 400px;
   font-size: 1.5rem; /* 24px */
   line-height: 2rem; /* 32px */

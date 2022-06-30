@@ -11,8 +11,6 @@ const MySelect = (props) => {
   );
   const [isOpen, setIsOpen] = useState(false);
 
-  console.log(selectedOption);
-
   const toggling = () => setIsOpen(!isOpen);
 
   const onOptionClicked = (label, icon) => () => {
