@@ -3,10 +3,10 @@ import * as S from "./styles";
 import { WalletItem, WalletButton } from "../../../components";
 
 const WalletList = (props) => {
-  const { walletsData, isListShort, changeListLength } = props;
+  const { walletsData, isListShort, changeListLength, ...other } = props;
 
   return (
-    <S.ListWrapper {...props}>
+    <S.ListWrapper {...other}>
       {isListShort
         ? walletsData.map((element, index) => {
             if (index < 4) {

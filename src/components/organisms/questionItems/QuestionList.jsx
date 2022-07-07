@@ -18,7 +18,7 @@ const QuestionList = (props) => {
       <S.Title>Promoted articles</S.Title>
       <S.ListWrapper>
         {filteredQuestionsData.map((element) => (
-          <QuestionItem label={element.label} />
+          <QuestionItem label={element.label} key={element.label}/>
         ))}
       </S.ListWrapper>
     </S.Wrapper>

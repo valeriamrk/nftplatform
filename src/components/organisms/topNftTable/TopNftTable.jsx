@@ -15,7 +15,7 @@ const TopNftTable = (props) => {
 
   useEffect(() => {
     sortedAndFilteredData();
-  }, [sortConfig, selectedOption]);
+  }, [sortConfig, selectedOption ]);
 
   const sortedAndFilteredData = () => {
     const testData = [...statsData];

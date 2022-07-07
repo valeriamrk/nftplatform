@@ -16,7 +16,7 @@ const LikesCounter = (props) => {
   };
 
   return (
-    <div>
+    <>
       {likesCount > likes ? (
         <S.Likes onClick={() => likesCounter()}>
           <S.RedLikeIcon>
@@ -32,7 +32,7 @@ const LikesCounter = (props) => {
           <S.LikeValue>{likesCount}</S.LikeValue>
         </S.Likes>
       )}
-    </div>
+    </>
   );
 };
 

@@ -16,7 +16,7 @@ const sortRows = (rows, sort) => {
     const numB = Number(b[sortKey]);
     if (numB < numA) return -1;
     if (numB > numA) return 1;
-    if (numA == numB) return 0;
+    if (numA === numB) return 0;
   };
 
   const descSort = (a, b, sortKey) => {
@@ -24,7 +24,7 @@ const sortRows = (rows, sort) => {
     const numB = Number(b[sortKey]);
     if (numB < numA) return 1;
     if (numB > numA) return -1;
-    if (numA == numB) return 0;
+    if (numA === numB) return 0;
   };
 
   return rows.sort(getComparator(sort.sortKey, sort.direction));

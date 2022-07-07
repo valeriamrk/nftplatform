@@ -2,10 +2,10 @@ import React from "react";
 import * as S from "./styles";
 
 const InputField = (props) => {
-  const { searchValue, handleFilter } = props;
+  const { searchValue, handleFilter, ...other } = props;
 
   return (
-    <S.InputField {...props} value={searchValue} onChange={handleFilter} />
+    <S.InputField {...other} value={searchValue} onChange={handleFilter} />
   );
 };
 

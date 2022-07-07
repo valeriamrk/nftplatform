@@ -7,27 +7,27 @@ import { MdClear } from "react-icons/md";
 const SearchBar = (props) => {
   const {
     placeholder,
-    white,
     searchValue,
     setSearchValue,
     handleFilter,
     clearInput,
+    ...other
   } = props;
 
   return (
-    <S.SearchBar {...props}>
-      <S.SearchIcon {...props}>
+    <S.SearchBar {...other}>
+      <S.SearchIcon {...other}>
         <AiOutlineSearch />
       </S.SearchIcon>
       <InputField
         placeholder={placeholder}
-        white={white}
         searchValue={searchValue}
         setSearchValue={setSearchValue}
         handleFilter={handleFilter}
+        {...other}
       />
       {searchValue.length !== 0 && (
-        <S.CloseIcon {...props} onClick={() => clearInput()}>
+        <S.CloseIcon {...other} onClick={() => clearInput()}>
           <MdClear />
         </S.CloseIcon>
       )}

@@ -22,7 +22,7 @@ const SingleElementAccordion = (props) => {
         </S.Icon>
       </S.SingleAccTitle>
       <S.SingleAccPanel active={isActive}>
-        <div>{accData.label}</div>
+        <span>{accData.label}</span>
       </S.SingleAccPanel>
     </S.SingleAccWrapper>
   );

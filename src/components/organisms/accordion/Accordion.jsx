@@ -25,45 +25,42 @@ const Accordion = () => {
           <S.Icon>
             <MdLabel />
           </S.Icon>
-          Properties{" "}
+          Properties
         </S.LeftTitle>
         <S.Icon>
           <MdExpandMore />
         </S.Icon>
       </S.AccTitle>
       <S.AccPanel active={accordionData[0].opened}>
-        <div>Some properties</div>
+        <span>Some properties</span>
       </S.AccPanel>
       <S.AccTitle onClick={() => accordionHandler({ id: 2 })}>
         <S.LeftTitle>
-          {" "}
           <S.Icon>
             <MdEqualizer />
           </S.Icon>
-          Stats{" "}
+          Stats
         </S.LeftTitle>
-
         <S.Icon>
           <MdExpandMore />
         </S.Icon>
       </S.AccTitle>
       <S.AccPanel active={accordionData[1].opened}>
-        <div>Some stats</div>
+        <span>Some stats</span>
       </S.AccPanel>
       <S.AccTitle onClick={() => accordionHandler({ id: 3 })}>
         <S.LeftTitle>
-          {" "}
           <S.Icon>
             <MdVerticalSplit />
           </S.Icon>
-          About Crypto Coven{" "}
+          About Crypto Coven
         </S.LeftTitle>
         <S.Icon>
           <MdExpandMore />
         </S.Icon>
       </S.AccTitle>
       <S.AccPanel active={accordionData[2].opened}>
-        <div>Some info about</div>
+        <span>Some info about</span>
       </S.AccPanel>
       <S.AccTitle onClick={() => accordionHandler({ id: 4 })}>
         <S.LeftTitle>
@@ -78,7 +75,7 @@ const Accordion = () => {
         </S.Icon>
       </S.AccTitle>
       <S.AccPanel active={accordionData[3].opened}>
-        <div>Some details</div>
+        <span>Some details</span>
       </S.AccPanel>
     </S.AccWrapper>
   );

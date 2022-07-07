@@ -171,6 +171,6 @@ export const nftCardsSlice = createSlice({
   reducers: {},
 });
 
-export const {} = nftCardsSlice.actions;
+// export const {} = nftCardsSlice.actions;
 
 export default nftCardsSlice.reducer;

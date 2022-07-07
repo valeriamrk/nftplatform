@@ -2,7 +2,6 @@ export * from "./atoms/myButton/MyButton";
 export * from "./atoms/inputField/InputField";
 export * from "./atoms/logo/Logo";
 export * from "./atoms/headerItem/HeaderItem";
-export * from "./atoms/switchButton/SwitchButton";
 
 export * from "./molecules/searchBar/SearchBar";
 export * from "./molecules/logoGroup/LogoGroup";
@@ -13,10 +12,10 @@ export * from "./molecules/footerNavGroup/FooterNavGroup";
 export * from "./molecules/footerNavGroup/LinksTable";
 export * from "./molecules/footerNavGroup/CopywriteGroup";
 export * from "./molecules/socialIconsGroup/SocialIconsCollection";
-export * from "./molecules/dropdown/MyDropdown";
-export * from "./molecules/dropdown/DropdownListItem";
 export * from "./molecules/select/MySelect";
 export * from "./molecules/likesCounter/LikesCounter";
+export * from "./molecules/switchButton/SwitchButton";
+
 
 export * from "./organisms/hero/Hero";
 export * from "./organisms/nftCard/NftCard";
@@ -38,11 +37,7 @@ export * from "./organisms/faqItems/FaqItems";
 export * from "./organisms/globalSearch/GlobalSearch";
 export * from "./organisms/globalSearch/SearchResults";
 
-export * from "./templates/box/Box.styled";
-export * from "./templates/flex/Flex.styled";
-export * from "./templates/layout/pageBasicLayout/PageBasicLayout";
-export * from "./templates/box/Box.styled";
-export * from "./templates/flex/Flex.styled";
+export * from "./templates/layout/PageBasicLayout";
 
 export * from "../pages/mainPage/MainPage";
 export * from "../pages/collectionsPage/Collections";

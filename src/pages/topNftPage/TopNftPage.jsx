@@ -16,7 +16,7 @@ const TopNftPage = () => {
   });
 
   return (
-    <div>
+    <>
       <S.TopContainer>
         <S.TextContainer>Top NFTs</S.TextContainer>
         <S.DescriptionContainer>
@@ -29,7 +29,7 @@ const TopNftPage = () => {
         />
         <TopNftTable statsData={statsData} selectedOption={selectedOption} />
       </S.TopContainer>
-    </div>
+    </>
   );
 };
 

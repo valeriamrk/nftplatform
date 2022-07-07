@@ -9,11 +9,11 @@ const SwitchButton = (props) => {
 
   const themeValue = () => (defaultTheme === "light" ? false : true);
 
-  const [value, setCheckbox] = useState(themeValue);
+  const [checkbox, setCheckbox] = useState(themeValue);
 
   const switchHandler = () => {
     themeToggler();
-    setCheckbox(!value);
+    setCheckbox(!checkbox);
   };
 
   return (
@@ -21,9 +21,9 @@ const SwitchButton = (props) => {
       <S.Input
         id={"switch"}
         type="checkbox"
-        value={value}
-        checked={value}
-        onClick={() => switchHandler()}
+        value={checkbox}
+        checked={checkbox}
+        onChange={() => switchHandler()}
       />
       <S.Slider />
     </S.Label>

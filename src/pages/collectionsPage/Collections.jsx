@@ -90,6 +90,7 @@ const Collections = (props) => {
       <S.NftCardCollection>
         {nftCards.map((element) => (
           <NftCard
+            key={element.id}
             id={element.id}
             author={element.author}
             name={element.nft_name}

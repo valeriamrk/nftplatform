@@ -48,7 +48,7 @@ const LinksTable = () => {
           <h3>Marketplace</h3>
         </S.ListHeader>
         {listItems.marketplace.map((element) => (
-          <S.ListItem>
+          <S.ListItem key={element.label}>
             <a href="#">{element.label}</a>
           </S.ListItem>
         ))}
@@ -58,7 +58,7 @@ const LinksTable = () => {
           <h3>My Account</h3>
         </S.ListHeader>
         {listItems.myAccount.map((element) => (
-          <S.ListItem>
+          <S.ListItem key={element.label}>
             <a href="#">{element.label}</a>
           </S.ListItem>
         ))}
@@ -66,7 +66,7 @@ const LinksTable = () => {
           <h3>Stats</h3>
         </S.ListHeader>
         {listItems.stats.map((element) => (
-          <S.ListItem>
+          <S.ListItem key={element.label}>
             <a href="#">{element.label}</a>
           </S.ListItem>
         ))}
@@ -76,7 +76,7 @@ const LinksTable = () => {
           <h3>Resources</h3>
         </S.ListHeader>
         {listItems.resources.map((element) => (
-          <S.ListItem>
+          <S.ListItem key={element.label}>
             <a href="#">{element.label}</a>
           </S.ListItem>
         ))}
@@ -86,7 +86,7 @@ const LinksTable = () => {
           <h3>Company</h3>
         </S.ListHeader>
         {listItems.company.map((element) => (
-          <S.ListItem>
+          <S.ListItem key={element.label}>
             <a href="#">{element.label}</a>
           </S.ListItem>
         ))}

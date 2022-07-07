@@ -15,7 +15,6 @@ const ResourcesPage = () => {
   );
 
   const [searchValue, setSearchValue] = useState("");
-  const [filteredData, setFilteredData] = useState([]);
 
   const filteredHelpItems = helpItemsData.filter((element) => {
     return (
@@ -26,19 +25,14 @@ const ResourcesPage = () => {
   const filteredQuestionsData = helpQuestionsData.filter((element) => {
     return element.label.toLowerCase().includes(searchValue.toLowerCase());
   });
+  
 
   const faqFilter = (event) => {
     const searchItem = event.target.value;
     setSearchValue(searchItem);
-    if (searchItem === "") {
-      setFilteredData([]);
-    } else {
-      setFilteredData(filteredHelpItems, filteredQuestionsData);
-    }
   };
 
   const clearInput = () => {
-    setFilteredData([]);
     setSearchValue("");
   };
 

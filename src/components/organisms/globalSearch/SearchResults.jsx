@@ -12,7 +12,7 @@ const SearchResults = (props) => {
     <S.ResultsContainer ref={ref}>
       {filterData.length !== 0 &&
         filterData.map((element) => (
-          <S.StyledLink to={`/opencard/${element.id}`}>
+          <S.StyledLink to={`/opencard/${element.id}`} key={element.id}>
             <S.ResultItem onClick={(e) => e.stopPropagation()}>
               <S.LeftContainer>
                 <S.Logo src={element.img} />

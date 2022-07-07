@@ -8,7 +8,7 @@ const LogoGroup = (props) => {
   const navigate = useNavigate();
   const path = "";
   const handleItemClick = (event, path) => {
-    handleClick();
+    handleClick(event);
     navigate(path);
   };
 
