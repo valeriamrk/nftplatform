@@ -18,14 +18,14 @@ const TopNftTable = (props) => {
   }, [sortConfig, selectedOption ]);
 
   const sortedAndFilteredData = () => {
-    const testData = [...statsData];
+    const changedData = [...statsData];
 
     if (selectedOption.label !== "All Categories") {
-      const filteredRows = filterRows(testData, selectedOption.label);
+      const filteredRows = filterRows(changedData, selectedOption.label);
       const sortedRows = sortRows(filteredRows, sortConfig);
       setTableData(sortedRows);
     } else {
-      const sortedRows = sortRows(testData, sortConfig);
+      const sortedRows = sortRows(changedData, sortConfig);
       setTableData(sortedRows);
     }
   };
